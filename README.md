@@ -4,6 +4,8 @@ Zum Starten von Python/Jupyter auf einem Cloud-Server bitte diesen Knopf drücke
 
 [![Python](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/usetheforce/test/master?urlpath=lab/tree/index.ipynb)
 
+Ein Inhaltsverzeichnis aller Aufgaben gibt es in "index.ipynb".
+
 ### Hinweise:
 - Das Starten des Cloud-Servers dauert 1 bis 2 Minuten -- also bitte etwas Geduld.
 - Es kann auch sein, dass das überhaupt nicht funktioniert. (An der Schule z. B. geht Jupyter über die Cloud nicht.)
