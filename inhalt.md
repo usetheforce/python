@@ -34,9 +34,9 @@ a15	Automatische Zahlenlisten
 
 a16	Arbeiten mit Dateien
 
-a17	Befehls-Bibliotheken
+a17	Objekte abspeichern im "JSON"-Format
 
-a18	Objekte abspeichern im "JSON"-Format
+a18	Befehls-Bibliotheken
 
 a19	Aufbau und Aufgaben eines Datenbanksystems
 
@@ -45,4 +45,6 @@ a20	SQL
 a21	Auswahlabfragen
 
 a22	Aktionsabfragen
+
+a23	JOIN 1
 
