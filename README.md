@@ -5,6 +5,9 @@
 
 Zum Starten von Python/Jupyter auf einem Cloud-Server bitte diesen Knopf drücken:
 
+https://github.com/usetheforce/test/blob/master/inhalt.md
+
+
 [![Python](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/usetheforce/test/master?urlpath=lab/tree/index.ipynb)
 
 Ein Inhaltsverzeichnis aller Aufgaben gibt es in "inhalt.md".
