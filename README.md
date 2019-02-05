@@ -27,6 +27,6 @@ Man kann die .ipynb-Dateien dann nur anschauen (durch darauf Klicken), aber nich
 - Zum Anschauen / Bearbeiten muss Anaconda (Jupyter) installiert sein:  https://www.anaconda.com/download/ .
 - Rechts oben auf dieser Seite gibt es einen grünen Knopf ("Clone or Download"). Wenn man den anklickt, gibt es die Option "Download ZIP". Damit kann man alle Dateien hier in einer einzigen ZIP-Datei zusammengefasst herunterladen.
 
-#### 4. Die Aufgaben als html gerendert anschauen.
+#### 4. Die Aufgaben als HTML gerendert anschauen.
 
-Die Aufgaben liegen im "Aufgaben"-Verzeichnis auch als html vor. Ein Inhaltsverzeichnis aller Aufgaben gibt es in ["inhalt.md"](https://github.com/usetheforce/test/blob/master/inhalt.md).
+Die Aufgaben liegen im "Aufgaben"-Verzeichnis auch als html vor. Ein Verzeichnis aller Aufgaben im HTML-Format gibt es in ["inhalt.md"](https://github.com/usetheforce/test/blob/master/inhalt.md).
