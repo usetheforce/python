@@ -11775,7 +11775,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Aktionsabfragen">Aktionsabfragen<a class="anchor-link" href="#Aktionsabfragen">&#182;</a></h2><p>Lesen Sie im Buch Seite 59 durch. Mit ihrer Hilfe sollten Sie die nachfolgende Aufgaben lösen können.</p>
+<h2 id="Aktionsabfragen">Aktionsabfragen<a class="anchor-link" href="#Aktionsabfragen">&#182;</a></h2><p>Lies im Buch Seite 59 durch. Mit ihrer Hilfe sollten Sie die nachfolgende Aufgaben lösen können.</p>
 <p>Es gibt vier Typen von Aktionsabfragen. Die Tabellenerstellungsabfragen sind im Buch etwas knapp dargestellt. Deshalb soll hier eine Beispielaufgabe dazu mit Lösung besprochen werden.</p>
 <p>Hilfreich sind auch folgende Tutorial-Seiten:</p>
 <table>
@@ -11803,9 +11803,7 @@ div#notebook {
 </tr>
 </tbody>
 </table>
-<h3 id="Beispielaufgabe-Tabellenerstellungsabfrage:">Beispielaufgabe Tabellenerstellungsabfrage:<a class="anchor-link" href="#Beispielaufgabe-Tabellenerstellungsabfrage:">&#182;</a></h3><ol>
-<li>Erstellen Sie eine Datenbankdatei mit Namen <i>freunde.db</i> und legen Sie dort eine Tabelle "Freunde" an, die folgende Attribute enthält: Name, Telefonnummer, Wohnort. Wählen Sie für die Attribute geeignete Datentypen aus. Der Primärschlüssel soll der Name sein.</li>
-</ol>
+<h3 id="Beispielaufgabe-Tabellenerstellungsabfrage:">Beispielaufgabe Tabellenerstellungsabfrage:<a class="anchor-link" href="#Beispielaufgabe-Tabellenerstellungsabfrage:">&#182;</a></h3><p>Erstellen Sie eine Datenbankdatei mit Namen <i>freunde.db</i> und legen Sie dort eine Tabelle "Freunde" an, die folgende Attribute enthält: Name, Telefonnummer, Wohnort. Wählen Sie für die Attribute geeignete Datentypen aus. Der Primärschlüssel soll der Name sein.</p>
 <h4 id="Hinweis:">Hinweis:<a class="anchor-link" href="#Hinweis:">&#182;</a></h4><p>Bei Aktionsabfragen muss in einem zusätzlichen Schritt das Verändern der Daten explizit freigegeben werden. Das geschieht mit der <code>.commit()</code>-Methode der Datenbankverbindung.</p>
 <h4 id="L&#246;sung:">L&#246;sung:<a class="anchor-link" href="#L&#246;sung:">&#182;</a></h4>
 </div>
@@ -11923,7 +11921,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Aufgabe-22:">Aufgabe 22:<a class="anchor-link" href="#Aufgabe-22:">&#182;</a></h2><p>Speichere das Ergebnis unter <em>VornameNachname</em>-aufgabe22.ipynb auf Laufwerk H:.</p>
 <ol>
-<li>Fügen Sie in die Tabelle "Freunde" die Freunde "Donald", "Daisy" und "Dagobert" mit den Telefonnummern 117, 118 und 119 ein. Alle drei wohnen in Entenhausen. Überprüfen Sie durch ein anschließendes <code>SELECT</code>-Statement, ob die Werte auch richtig eingetragen wurden</li>
+<li>Füge in die Tabelle "Freunde" die Freunde "Donald", "Daisy" und "Dagobert" mit den Telefonnummern 117, 118 und 119 ein. Alle drei wohnen in Entenhausen. Überprüfe durch ein anschließendes <code>SELECT</code>-Statement, ob die Werte auch richtig eingetragen wurden</li>
 </ol>
 
 </div>
@@ -11965,7 +11963,7 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ol>
-<li>Löschen Sie "Dagobert" aus der "Freunde"-Tabelle. Überprüfen Sie das Ergebnis.</li>
+<li>Lösche "Dagobert" aus der "Freunde"-Tabelle. Überprüfe das Ergebnis durch <code>SELECT</code>.</li>
 </ol>
 
 </div>
@@ -12096,6 +12094,22 @@ div#notebook {
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="L&#246;sung:">L&#246;sung:<a class="anchor-link" href="#L&#246;sung:">&#182;</a></h3><ol>
+<li><p><code>[('Donald', 117, 'Entenhausen'), ('Daisy', 118, 'Entenhausen'), ('Dagobert', 119, 'Entenhausen')]</code></p>
+</li>
+<li><p><code>[('Donald', 117, 'Entenhausen'), ('Daisy', 118, 'Entenhausen')]</code></p>
+</li>
+<li><p><code>[('Phantomias', 999, 'Entenhausen'), ('Daisy', 118, 'Entenhausen')]</code></p>
+</li>
+</ol>
+
+</div>
+</div>
 </div>
     </div>
   </div>
