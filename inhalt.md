@@ -48,15 +48,9 @@
 
 [a19](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a19.html)&nbsp;Aufbau und Aufgaben eines Datenbanksystems
 
-[a20-loesung](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a20-loesung.html)&nbsp;
-
 [a20](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a20.html)&nbsp;SQL
 
-[a21-loesung](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a21-loesung.html)&nbsp;
-
 [a21](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a21.html)&nbsp;Auswahlabfragen
-
-[a22-loesung](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a22-loesung.html)&nbsp;
 
 [a22](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a22.html)&nbsp;Aktionsabfragen
 
