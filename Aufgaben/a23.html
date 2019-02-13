@@ -11775,7 +11775,96 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="JOIN-1">JOIN 1<a class="anchor-link" href="#JOIN-1">&#182;</a></h2><p>TODO</p>
+<h1 id="Datenintegrit&#228;t-und-Datenkonsistenz">Datenintegrit&#228;t und Datenkonsistenz<a class="anchor-link" href="#Datenintegrit&#228;t-und-Datenkonsistenz">&#182;</a></h1><h2 id="Datenintegrit&#228;t">Datenintegrit&#228;t<a class="anchor-link" href="#Datenintegrit&#228;t">&#182;</a></h2><h3 id="Integrit&#228;tsbedingungen-(Wiederholung)">Integrit&#228;tsbedingungen (Wiederholung)<a class="anchor-link" href="#Integrit&#228;tsbedingungen-(Wiederholung)">&#182;</a></h3><ul>
+<li><strong>Bereichs-Integrität</strong>: sinnvolle Werte für die Datensätze</li>
+<li><strong>Entitäts-Integrität</strong>: Eindeutigkeit aller Datensätze in einer Tabelle ($\rightarrow$  Primärschlüssel)</li>
+<li><strong>Referentielle Integrität</strong>: bei <em>mehreren</em> Tabellen darf es untereinander keine Verweise "ins Nirgendwo" geben</li>
+</ul>
+<h3 id="Warum-nicht-nur-eine-Tabelle?">Warum nicht nur <em>eine</em> Tabelle?<a class="anchor-link" href="#Warum-nicht-nur-eine-Tabelle?">&#182;</a></h3><ul>
+<li><strong>Redundanz</strong> (mehrmaliges Speichern von gleichen Daten): <p>
+u. U. Speicherverschwendung (z. B. Bilddateien)</li>
+<li><strong>Konsistenz</strong> (logische Übereinstimmung der Daten):<p>
+  Inkonsistenzen z. B. durch Tippfehler möglich. (Bsp. Buch S. )</li>
+</ul>
+<h2 id="Datenkonsistenz">Datenkonsistenz<a class="anchor-link" href="#Datenkonsistenz">&#182;</a></h2><h3 id="&quot;Mutations&quot;-Anomalien:">"Mutations"-Anomalien:<a class="anchor-link" href="#&quot;Mutations&quot;-Anomalien:">&#182;</a></h3><p>Anomalien (Inkonsistenzen) können entstehen, wenn bei Aktionsabfragen ("Mutationen") Fehler gemacht werden. Man unterscheidet, je nachdem, wie die Anomalie entstanden ist:</p>
+<ul>
+<li><strong>Änderungs-Anomalie</strong></li>
+<li><strong>Einfüge-Anomalie</strong></li>
+<li><strong>Lösch-Anomalie</strong></li>
+</ul>
+<h3 id="Beispiele">Beispiele<a class="anchor-link" href="#Beispiele">&#182;</a></h3><p>Kunden einer Autowerkstatt und ihre Autos:</p>
+<table>
+<thead><tr>
+<th style="text-align:left">Kennzeichen</th>
+<th style="text-align:left">Kilometerstand</th>
+<th style="text-align:left">Kunde</th>
+<th style="text-align:left">Adresse</th>
+<th style="text-align:left">Fabrikat</th>
+<th style="text-align:left">Herstellungsland</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">LA-CH123</td>
+<td style="text-align:left">120001</td>
+<td style="text-align:left">Kurt Kasper</td>
+<td style="text-align:left">An der Affenschaukel 5, Untermaulbach</td>
+<td style="text-align:left">Opel Kapitän</td>
+<td style="text-align:left">BRD</td>
+</tr>
+<tr>
+<td style="text-align:left">LA-UT666</td>
+<td style="text-align:left">97779</td>
+<td style="text-align:left">Tim Turner</td>
+<td style="text-align:left">Unterm Bach 1, Obermaulbach</td>
+<td style="text-align:left">Opel Diplomat</td>
+<td style="text-align:left">BRD</td>
+</tr>
+<tr>
+<td style="text-align:left">LA-TZ987</td>
+<td style="text-align:left">28271</td>
+<td style="text-align:left">Kurt Kasper</td>
+<td style="text-align:left">An der Affenschaukel 5, Untermaulbach</td>
+<td style="text-align:left">NSU Prinz</td>
+<td style="text-align:left">BRD</td>
+</tr>
+<tr>
+<td style="text-align:left">LA-MM128</td>
+<td style="text-align:left">147888</td>
+<td style="text-align:left">Tanja Tochter</td>
+<td style="text-align:left">Am Löschteich 28, Teichgraben</td>
+<td style="text-align:left">Saab 9000</td>
+<td style="text-align:left">Schweden</td>
+</tr>
+<tr>
+<td style="text-align:left">LA-UF520</td>
+<td style="text-align:left">197812</td>
+<td style="text-align:left">Kurt Kasper</td>
+<td style="text-align:left">Am Löschteich 28, Teichgraben</td>
+<td style="text-align:left">Trabant Sport</td>
+<td style="text-align:left">DDR</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Änderungs-Anomalie</strong>: "Kurt Kasper" heißt eigentlich "Knut Kaspar". Der Name muss an 3 Stellen geändert werden. Wenn dabei ein Fehler passiert, sind die Daten inkonsistent.</li>
+<li><strong>Einfüge-Anomalie</strong>: Herr Kasper kommt mit dem Kfz mit der Nummer "LA-UF520" vorbei. Der Lehrling übersieht, dass es Auto und Kunden schon gibt und legt ihn nochmal an -- nur mit anderer Kundennummer.</li>
+<li><strong>Lösch-Anomalie</strong>: Aus Datenschutzgründen sollen die personenbezogenen Daten in alten Rechnungen gelöscht werden. Man würde aber gerne die Fabrikate und Kilometerstände behalten. Das kann u. U. schwierig sein, z. B. wenn das Kennzeichen Primärschlüssel ist.</li>
+</ul>
+<h2 id="Aufgabe:">Aufgabe:<a class="anchor-link" href="#Aufgabe:">&#182;</a></h2><ul>
+<li>Ins Werkstattbeispiel hat sich auch ohne Änderung schon eine Inkonsistenz in den Datenbestand eingeschlichen. Geben Sie an, worin diese besteht.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Überlegen Sie sich für das Werkstatt-Beispiel für jede der drei Arten je selbst eine Anomalie.</li>
+</ul>
 
 </div>
 </div>

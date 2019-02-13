@@ -48,11 +48,21 @@ a19-loesung [html](https://htmlpreview.github.io/?https://github.com/usetheforce
 
 a19 [html](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a19.html)&nbsp;[ipynb](https://raw.githubusercontent.com/usetheforce/test/master/Aufgaben/a19.ipynb)&nbsp;Aufbau und Aufgaben eines Datenbanksystems
 
+a20-loesung [html](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a20-loesung.html)&nbsp;[ipynb](https://raw.githubusercontent.com/usetheforce/test/master/Aufgaben/a20-loesung.ipynb)&nbsp;
+
 a20 [html](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a20.html)&nbsp;[ipynb](https://raw.githubusercontent.com/usetheforce/test/master/Aufgaben/a20.ipynb)&nbsp;SQL
+
+a21-loesung [html](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a21-loesung.html)&nbsp;[ipynb](https://raw.githubusercontent.com/usetheforce/test/master/Aufgaben/a21-loesung.ipynb)&nbsp;
 
 a21 [html](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a21.html)&nbsp;[ipynb](https://raw.githubusercontent.com/usetheforce/test/master/Aufgaben/a21.ipynb)&nbsp;Auswahlabfragen
 
+a22-loesung [html](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a22-loesung.html)&nbsp;[ipynb](https://raw.githubusercontent.com/usetheforce/test/master/Aufgaben/a22-loesung.ipynb)&nbsp;
+
 a22 [html](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a22.html)&nbsp;[ipynb](https://raw.githubusercontent.com/usetheforce/test/master/Aufgaben/a22.ipynb)&nbsp;Aktionsabfragen
 
-a23 [html](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a23.html)&nbsp;[ipynb](https://raw.githubusercontent.com/usetheforce/test/master/Aufgaben/a23.ipynb)&nbsp;JOIN 1
+a23 [html](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a23.html)&nbsp;[ipynb](https://raw.githubusercontent.com/usetheforce/test/master/Aufgaben/a23.ipynb)&nbsp;# Datenintegrität und Datenkonsistenz
+
+a24 [html](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a24.html)&nbsp;[ipynb](https://raw.githubusercontent.com/usetheforce/test/master/Aufgaben/a24.ipynb)&nbsp;Lösung der Redundanz- und Konsistenz-Problematik: <br>Mehrere Tabellen
+
+a25 [html](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a25.html)&nbsp;[ipynb](https://raw.githubusercontent.com/usetheforce/test/master/Aufgaben/a25.ipynb)&nbsp;...
 

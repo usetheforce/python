@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>a21-loesung</title><script src="https://unpkg.com/jupyter-js-widgets@2.0.*/dist/embed.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>a25</title><script src="https://unpkg.com/jupyter-js-widgets@2.0.*/dist/embed.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11775,7 +11775,68 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="L&#246;sung:">L&#246;sung:<a class="anchor-link" href="#L&#246;sung:">&#182;</a></h2>
+<h2 id="...">...<a class="anchor-link" href="#...">&#182;</a></h2><center><b>Auto</b></center><table>
+<thead><tr>
+<th style="text-align:left">Kennzeichen</th>
+<th style="text-align:left">Kilometerstand</th>
+<th style="text-align:left">Fabrikat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">LA-CH123</td>
+<td style="text-align:left">120001</td>
+<td style="text-align:left">Opel Kapitän</td>
+</tr>
+<tr>
+<td style="text-align:left">LA-UT666</td>
+<td style="text-align:left">97779</td>
+<td style="text-align:left">Opel Diplomat</td>
+</tr>
+<tr>
+<td style="text-align:left">LA-TZ987</td>
+<td style="text-align:left">28271</td>
+<td style="text-align:left">NSU Prinz</td>
+</tr>
+<tr>
+<td style="text-align:left">LA-MM128</td>
+<td style="text-align:left">147888</td>
+<td style="text-align:left">Saab 9000</td>
+</tr>
+<tr>
+<td style="text-align:left">LA-UF520</td>
+<td style="text-align:left">197812</td>
+<td style="text-align:left">Trabant Sport</td>
+</tr>
+</tbody>
+</table>
+<center><b>Kunde</b></center><table>
+<thead><tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Adresse</th>
+<th style="text-align:left">besitzt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Kurt Kasper</td>
+<td style="text-align:left">An der Affenschaukel 5, Untermaulbach</td>
+<td style="text-align:left">LA-CH123, LA-TZ987, LA-UF520</td>
+</tr>
+<tr>
+<td style="text-align:left">Tim Turner</td>
+<td style="text-align:left">Unterm Bach 1, Obermaulbach</td>
+<td style="text-align:left">LA-UT666</td>
+</tr>
+<tr>
+<td style="text-align:left">Tanja Tochter</td>
+<td style="text-align:left">Am Löschteich 28, Teichgraben</td>
+<td style="text-align:left">LA-MM128</td>
+</tr>
+</tbody>
+</table>
+<p>Um die Einträge der Tabelle "Auto" den Einträgen in "Kunde" zuordnen zu können, braucht es ein Attribut, das diese Zuordnung leistet. Man nennt es <b>Fremdschlüssel</b>. Im Beispiel wäre das "besitzt".</p>
+
 </div>
 </div>
 </div>
@@ -11783,1607 +11844,129 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="1.">1.<a class="anchor-link" href="#1.">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span> 
-<span class="n">datenbankverbindung</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span> <span class="s2">&quot;terra1.db&quot;</span><span class="p">)</span> 
-<span class="n">cursor</span> <span class="o">=</span> <span class="n">datenbankverbindung</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-
-<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT Name FROM land;&quot;</span><span class="p">)</span> 
-
-<span class="n">ergebnis</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-<span class="n">datenbankverbindung</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-
-<span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;Es gibt&quot;</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">ergebnis</span><span class="p">),</span><span class="s2">&quot;Länder:&quot;</span> <span class="p">)</span>
-<span class="k">for</span> <span class="n">datum</span> <span class="ow">in</span> <span class="n">ergebnis</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span> <span class="n">datum</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Es gibt 197 Länder:
-Algerien
-Angola
-Bahamas
-Burundi
-Kamerun
-Elfenbeinküste
-Kenia
-Sudan
-Tansania
-Uganda
-Eritrea
-Ägypten
-Äthiopien
-Gabun
-Ghana
-Guinea-Bissau
-Guinea
-Kap Verde
-Komoren
-Libyen
-Liberia
-Lesotho
-Marokko
-Mosambique
-Mauritius
-Malawi
-Botswana
-Zentralafrikanische Republik
-Kongo, Republik
-Djibuti
-Äquatorialguinea
-Mauretanien
-Madagaskar
-Mali
-Niger
-Benin
-Südafrika
-Ruanda
-Sao Tome und Principe
-Swasiland
-Senegal
-Somalia
-Südsudan
-Namibia
-Seychellen
-Tschad
-Togo
-Tunesien
-Burkina Faso
-Gambia
-Sierra Leone
-Nigeria
-Sambia
-Kongo, Demokratische Republik
-Simbabwe
-Afghanistan
-Armenien
-Aserbaidschan
-Bahrein
-Bangladesch
-Bhutan
-Brunei
-Myanmar
-Sri Lanka
-Georgien
-Israel
-Indien
-Iran
-Irak
-Japan
-Jemen
-Jordanien
-Kasachstan
-Kirgisistan
-Saudi-Arabien
-Kuwait
-Laos
-Mongolischer Staat
-Malaysia
-Nepal
-Nordkorea
-Oman
-Pakistan
-Philippinen
-Katar
-Indonesien
-Libanon
-Malediven
-Taiwan
-Südkorea
-Russland
-Singapur
-Syrien
-Tadschikistan
-Thailand
-Turkmenistan
-Türkei
-Vereinigte Arabische Emirate
-Usbekistan 
-Vietnam
-China
-Kambodscha
-Australien
-Cookinseln
-Fidschi
-Mikronesien
-Kiribati
-Marshallinseln
-Nauru
-Neuseeland
-Palau
-Papua-Neuguinea
-Salomonen
-Timor-Leste
-Tonga
-Tuvalu
-Vanuatu
-Samoa
-Österreich
-Albanien
-Andorra
-Belgien
-Bulgarien
-Bosnien und Herzegowina
-Weißrussland
-Schweiz
-Zypern
-Tschechische Republik
-Deutschland
-Dänemark
-Spanien
-Estland
-Frankreich
-Liechtenstein
-Großbritannien
-Griechenland
-Ungarn
-Kroatien
-Italien
-Irland
-Island
-Luxemburg
-Litauen
-Lettland
-Malta
-Monaco
-Moldawien
-Mazedonien
-Montenegro
-Norwegen
-Niederlande
-Portugal
-Polen
-Kosovo
-Rumänien
-San Marino
-Schweden
-Vatikanstadt
-Finnland
-Slowakei
-Slowenien
-Ukraine
-Serbien
-Antigua und Barbuda
-Barbados
-Belize
-Kuba
-Kanada
-Costa Rica
-Dominikanische Republik
-El Salvador
-Guatemala
-Honduras
-Jamaika
-Mexiko
-Nicaragua
-Panama
-Haiti
-Saint Kitts and Nevis
-Vereinigte Staaten von Amerika
-Dominica
-Grenada
-Saint Lucia
-Saint Vincent und  Grenadinen
-Bolivien
-Brasilien
-Kolumbien
-Ecuador
-Guyana
-Peru
-Paraguay
-Argentinien
-Chile
-Suriname
-Trinidad und Tobago
-Uruguay
-Venezuela
-</pre>
-</div>
-</div>
+<center><b>Auto</b></center><table>
+<thead><tr>
+<th style="text-align:left">Kennzeichen</th>
+<th style="text-align:left">Kilometerstand</th>
+<th style="text-align:left">Kundennummer</th>
+<th style="text-align:left">Fabrikat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">LA-CH123</td>
+<td style="text-align:left">120001</td>
+<td style="text-align:left">47</td>
+<td style="text-align:left">Opel Kapitän</td>
+</tr>
+<tr>
+<td style="text-align:left">LA-UT666</td>
+<td style="text-align:left">97779</td>
+<td style="text-align:left">111</td>
+<td style="text-align:left">Opel Diplomat</td>
+</tr>
+<tr>
+<td style="text-align:left">LA-TZ987</td>
+<td style="text-align:left">28271</td>
+<td style="text-align:left">47</td>
+<td style="text-align:left">NSU Prinz</td>
+</tr>
+<tr>
+<td style="text-align:left">LA-MM128</td>
+<td style="text-align:left">147888</td>
+<td style="text-align:left">227</td>
+<td style="text-align:left">Saab 9000</td>
+</tr>
+<tr>
+<td style="text-align:left">LA-UF520</td>
+<td style="text-align:left">197812</td>
+<td style="text-align:left">47</td>
+<td style="text-align:left">Trabant Sport</td>
+</tr>
+</tbody>
+</table>
+<center><b>Kunde</b></center><table>
+<thead><tr>
+<th style="text-align:left">Kunde</th>
+<th style="text-align:left">Adresse</th>
+<th style="text-align:left">Kundennummer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Kurt Kasper</td>
+<td style="text-align:left">An der Affenschaukel 5, Untermaulbach</td>
+<td style="text-align:left">47</td>
+</tr>
+<tr>
+<td style="text-align:left">Tim Turner</td>
+<td style="text-align:left">Unterm Bach 1, Obermaulbach</td>
+<td style="text-align:left">111</td>
+</tr>
+<tr>
+<td style="text-align:left">Tanja Tochter</td>
+<td style="text-align:left">Am Löschteich 28, Teichgraben</td>
+<td style="text-align:left">227</td>
+<td>Saab 9000</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th style="text-align:left">Kennzeichen</th>
+<th style="text-align:left">Kilometerstand</th>
+<th style="text-align:left">Kunde</th>
+<th style="text-align:left">Adresse</th>
+<th style="text-align:left">Kundennummer</th>
+<th style="text-align:left">Fabrikat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">LA-CH123</td>
+<td style="text-align:left">120001</td>
+<td style="text-align:left">Kurt Kasper</td>
+<td style="text-align:left">An der Affenschaukel 5, Untermaulbach</td>
+<td style="text-align:left">47</td>
+<td style="text-align:left">Opel Kapitän</td>
+</tr>
+<tr>
+<td style="text-align:left">LA-UT666</td>
+<td style="text-align:left">97779</td>
+<td style="text-align:left">Tim Turner</td>
+<td style="text-align:left">Unterm Bach 1, Obermaulbach</td>
+<td style="text-align:left">111</td>
+<td style="text-align:left">Opel Diplomat</td>
+</tr>
+<tr>
+<td style="text-align:left">LA-TZ987</td>
+<td style="text-align:left">28271</td>
+<td style="text-align:left">Kurt Kasper</td>
+<td style="text-align:left">An der Affenschaukel 5, Untermaulbach</td>
+<td style="text-align:left">47</td>
+<td style="text-align:left">NSU Prinz</td>
+</tr>
+<tr>
+<td style="text-align:left">LA-MM128</td>
+<td style="text-align:left">147888</td>
+<td style="text-align:left">Tanja Tochter</td>
+<td style="text-align:left">Am Löschteich 28, Teichgraben</td>
+<td style="text-align:left">227</td>
+<td style="text-align:left">Saab 9000</td>
+</tr>
+<tr>
+<td style="text-align:left">LA-UF520</td>
+<td style="text-align:left">197812</td>
+<td style="text-align:left">Kurt Kasper</td>
+<td style="text-align:left">Am Löschteich 28, Teichgraben</td>
+<td style="text-align:left">47</td>
+<td style="text-align:left">Trabant Sport</td>
+</tr>
+</tbody>
+</table>
 
 </div>
 </div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="2.">2.<a class="anchor-link" href="#2.">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span> 
-<span class="n">datenbankverbindung</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span> <span class="s2">&quot;terra1.db&quot;</span><span class="p">)</span> 
-<span class="n">cursor</span> <span class="o">=</span> <span class="n">datenbankverbindung</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-
-<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM ort WHERE Einwohner = 100000;&quot;</span><span class="p">)</span> 
-
-<span class="n">ergebnis</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-<span class="n">datenbankverbindung</span><span class="o">.</span><span class="n">close</span><span class="p">()</span> 
-
-<span class="k">for</span> <span class="n">datum</span> <span class="ow">in</span> <span class="n">ergebnis</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span> <span class="n">datum</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="s2">&quot;,&quot;</span><span class="p">,</span><span class="n">datum</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="s2">&quot;,&quot;</span><span class="p">,</span><span class="n">datum</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="s2">&quot;Einwohner&quot;</span> <span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Port Blair , Indien , 100000 Einwohner
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="3.">3.<a class="anchor-link" href="#3.">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span> 
-<span class="n">datenbankverbindung</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span> <span class="s2">&quot;terra1.db&quot;</span><span class="p">)</span> 
-<span class="n">cursor</span> <span class="o">=</span> <span class="n">datenbankverbindung</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-
-<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT Name,Einwohner FROM ort WHERE Einwohner BETWEEN 100000 AND 200000 AND Land = &quot;Deutschland&quot; ORDER BY Einwohner DESC;&#39;</span><span class="p">)</span>
-
-<span class="n">ergebnis</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-<span class="n">datenbankverbindung</span><span class="o">.</span><span class="n">close</span><span class="p">()</span> 
-<span class="k">for</span> <span class="n">datum</span> <span class="ow">in</span> <span class="n">ergebnis</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span> <span class="n">datum</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="s2">&quot;,&quot;</span><span class="p">,</span><span class="n">datum</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="s2">&quot;Einwohner&quot;</span> <span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Kassel , 194747 Einwohner
-Hagen , 186716 Einwohner
-Saarbrücken , 178629 Einwohner
-Hamm , 176580 Einwohner
-Mülheim , 167108 Einwohner
-Potsdam , 164042 Einwohner
-Ludwigshafen a.R. , 163832 Einwohner
-Leverkusen , 161540 Einwohner
-Oldenburg , 160907 Einwohner
-Osnabrück , 156897 Einwohner
-Solingen , 156771 Einwohner
-Heidelberg , 154715 Einwohner
-Herne , 154608 Einwohner
-Neuss , 152644 Einwohner
-Darmstadt , 151879 Einwohner
-Paderborn , 145176 Einwohner
-Regensburg , 142292 Einwohner
-Ingolstadt , 131002 Einwohner
-Würzburg , 124219 Einwohner
-Wolfsburg , 123027 Einwohner
-Fürth , 121519 Einwohner
-Offenbach am Main , 120988 Einwohner
-Cottbus , 120812 Einwohner
-Ulm , 120714 Einwohner
-Heilbronn , 119841 Einwohner
-Pforzheim , 119291 Einwohner
-Göttingen , 117665 Einwohner
-Bottrop , 116017 Einwohner
-Recklinghausen , 114147 Einwohner
-Reutlingen , 112452 Einwohner
-Koblenz , 111434 Einwohner
-Bremerhaven , 110121 Einwohner
-Bergisch Gladbach , 109697 Einwohner
-Remscheid , 109009 Einwohner
-Jena , 108207 Einwohner
-Trier , 107233 Einwohner
-Erlangen , 106423 Einwohner
-Moers , 102923 Einwohner
-Siegen , 100325 Einwohner
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="4.">4.<a class="anchor-link" href="#4.">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span> 
-<span class="n">datenbankverbindung</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span> <span class="s2">&quot;terra1.db&quot;</span><span class="p">)</span> 
-<span class="n">cursor</span> <span class="o">=</span> <span class="n">datenbankverbindung</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-
-<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT Name,Land,Einwohner FROM ort WHERE Name LIKE &quot;</span><span class="si">%d</span><span class="s1">orf%&quot; ORDER BY Einwohner ASC;&#39;</span><span class="p">)</span> 
-
-<span class="n">ergebnis</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-<span class="n">datenbankverbindung</span><span class="o">.</span><span class="n">close</span><span class="p">()</span> 
-
-<span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;Es gibt&quot;</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">ergebnis</span><span class="p">),</span><span class="s2">&quot;Orte:&quot;</span> <span class="p">)</span>
-<span class="n">einwohnerGesamt</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">datum</span> <span class="ow">in</span> <span class="n">ergebnis</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span> <span class="n">datum</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="s2">&quot;,&quot;</span><span class="p">,</span><span class="n">datum</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="s2">&quot;,&quot;</span><span class="p">,</span><span class="n">datum</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="s2">&quot;Einwohner&quot;</span> <span class="p">)</span>
-    <span class="n">einwohnerGesamt</span> <span class="o">=</span> <span class="n">einwohnerGesamt</span> <span class="o">+</span> <span class="n">datum</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;Einwohner gesamt:&quot;</span><span class="p">,</span><span class="n">einwohnerGesamt</span> <span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Es gibt 1170 Orte:
-Moordorf bei Westermoor , Deutschland , 20 Einwohner
-Etteldorf , Deutschland , 29 Einwohner
-Feilsdorf , Deutschland , 34 Einwohner
-Dragensdorf , Deutschland , 70 Einwohner
-Kühdorf , Deutschland , 76 Einwohner
-Rattelsdorf bei Stadtroda , Deutschland , 87 Einwohner
-Tackesdorf , Deutschland , 87 Einwohner
-Halsdorf, Eifel , Deutschland , 91 Einwohner
-Bekdorf bei Wilster , Deutschland , 92 Einwohner
-Giesensdorf bei Ratzeburg , Deutschland , 93 Einwohner
-Karlsdorf bei Stadtroda , Deutschland , 96 Einwohner
-Immenstedt bei Albersdorf , Deutschland , 97 Einwohner
-Dingdorf, Eifel , Deutschland , 98 Einwohner
-Olsdorf , Deutschland , 99 Einwohner
-Nirmsdorf , Deutschland , 101 Einwohner
-Neuendorf, Eifel , Deutschland , 102 Einwohner
-Heisdorf , Deutschland , 103 Einwohner
-Drebsdorf , Deutschland , 107 Einwohner
-Wenddorf , Deutschland , 111 Einwohner
-Poxdorf bei Eisenberg , Deutschland , 113 Einwohner
-Giesdorf , Deutschland , 119 Einwohner
-Andlersdorf , Österreich , 119 Einwohner
-Stördorf , Deutschland , 120 Einwohner
-Voigtsdorf bei Strasburg , Deutschland , 133 Einwohner
-Tömmelsdorf , Deutschland , 136 Einwohner
-Onsdorf , Deutschland , 144 Einwohner
-Parbasdorf , Österreich , 146 Einwohner
-Triebendorf , Österreich , 147 Einwohner
-Mertendorf bei Eisenberg , Deutschland , 152 Einwohner
-Reesdorf bei Kiel , Deutschland , 152 Einwohner
-Heyersdorf , Deutschland , 157 Einwohner
-Zadelsdorf , Deutschland , 157 Einwohner
-Düchelsdorf , Deutschland , 158 Einwohner
-Neuendorf A bei Torgelow, Vorp , Deutschland , 159 Einwohner
-Riesdorf bei Köthen, Anhalt , Deutschland , 163 Einwohner
-Stubbendorf bei Rostock , Deutschland , 164 Einwohner
-Techelsdorf , Deutschland , 164 Einwohner
-Naundorf bei Seyda , Deutschland , 169 Einwohner
-Dohm-Lammersdorf , Deutschland , 172 Einwohner
-Eickendorf bei Haldensleben , Deutschland , 172 Einwohner
-Hugoldsdorf , Deutschland , 173 Einwohner
-Neugernsdorf , Deutschland , 173 Einwohner
-Rausdorf bei Stadtroda , Deutschland , 175 Einwohner
-Thandorf , Deutschland , 176 Einwohner
-Reesdorf bei Burg , Deutschland , 178 Einwohner
-Tautendorf bei Stadtroda , Deutschland , 178 Einwohner
-Petersdorf bei Strasburg , Deutschland , 180 Einwohner
-Rosendorf , Deutschland , 181 Einwohner
-Frankendorf bei Weimar, Thürin , Deutschland , 183 Einwohner
-Mühledorf (BE) , Schweiz , 183 Einwohner
-Kleinebersdorf , Deutschland , 186 Einwohner
-Pillingsdorf , Deutschland , 187 Einwohner
-Dockendorf , Deutschland , 188 Einwohner
-Niendorf bei Berkenthin , Deutschland , 190 Einwohner
-Neuendorf B , Deutschland , 191 Einwohner
-Benkendorf bei Salzwedel , Deutschland , 194 Einwohner
-Altdorf (SH) , Schweiz , 194 Einwohner
-Waltersdorf bei Stadtroda , Deutschland , 202 Einwohner
-Belsdorf bei Haldensleben , Deutschland , 208 Einwohner
-Velsdorf , Deutschland , 208 Einwohner
-Ziemendorf , Deutschland , 209 Einwohner
-Wittgendorf bei Saalfeld , Deutschland , 210 Einwohner
-Wiersdorf, Eifel , Deutschland , 211 Einwohner
-Burgsdorf bei Lutherstadt , Deutschland , 214 Einwohner
-Chursdorf bei Schleiz , Deutschland , 215 Einwohner
-Schelldorf bei Tangerhütte , Deutschland , 218 Einwohner
-Godendorf bei Neustrelitz , Deutschland , 219 Einwohner
-Ingendorf, Eifel , Deutschland , 226 Einwohner
-Stipsdorf , Deutschland , 226 Einwohner
-Friedersdorf, Thüringen , Deutschland , 227 Einwohner
-Hodorf , Deutschland , 227 Einwohner
-Peseckendorf , Deutschland , 228 Einwohner
-Rausdorf, Kreis Stormarn , Deutschland , 228 Einwohner
-Gutendorf bei Bad Berka , Deutschland , 231 Einwohner
-Göpfersdorf , Deutschland , 233 Einwohner
-Pöschendorf , Deutschland , 234 Einwohner
-Harmsdorf bei Ratzeburg , Deutschland , 235 Einwohner
-Hilbersdorf bei Gera , Deutschland , 236 Einwohner
-Glinzendorf , Österreich , 236 Einwohner
-Albersdorf bei Stadtroda , Deutschland , 238 Einwohner
-Fraßdorf , Deutschland , 238 Einwohner
-Jahrsdorf, Holstein , Deutschland , 240 Einwohner
-Dittersdorf bei Schleiz , Deutschland , 244 Einwohner
-Besdorf , Deutschland , 251 Einwohner
-Sommersdorf bei Demmin , Deutschland , 251 Einwohner
-Damsdorf, Kreis Segeberg , Deutschland , 252 Einwohner
-Buhlendorf , Deutschland , 253 Einwohner
-Meilendorf , Deutschland , 256 Einwohner
-Daasdorf am Berge , Deutschland , 257 Einwohner
-Strukdorf , Deutschland , 257 Einwohner
-Dietrichsdorf bei Lutherstadt  , Deutschland , 258 Einwohner
-Krempdorf , Deutschland , 260 Einwohner
-Biesdorf, Eifel , Deutschland , 263 Einwohner
-Kasdorf , Deutschland , 263 Einwohner
-Oberndorf, Pfalz , Deutschland , 265 Einwohner
-Wilhelmsdorf bei Pößneck , Deutschland , 265 Einwohner
-Arpsdorf , Deutschland , 268 Einwohner
-Kathendorf , Deutschland , 268 Einwohner
-Menzendorf bei Schönberg , Deutschland , 268 Einwohner
-Braunsdorf bei Zeulenroda , Deutschland , 269 Einwohner
-Groß Niendorf bei Parchim , Deutschland , 273 Einwohner
-Brachtendorf , Deutschland , 274 Einwohner
-Dietersdorf bei Roßla , Deutschland , 278 Einwohner
-Neuendorf am Damm , Deutschland , 278 Einwohner
-Rittersdorf bei Weimar, Thürin , Deutschland , 280 Einwohner
-Sandbeiendorf , Deutschland , 284 Einwohner
-Woltersdorf, Kreis Herzogtum L , Deutschland , 286 Einwohner
-Hottendorf , Deutschland , 291 Einwohner
-Uchtdorf bei Tangerhütte , Deutschland , 292 Einwohner
-Liedersdorf , Deutschland , 295 Einwohner
-Beldorf , Deutschland , 296 Einwohner
-Schandorf , Österreich , 296 Einwohner
-Schopsdorf , Deutschland , 297 Einwohner
-Nauendorf bei Kranichfeld , Deutschland , 300 Einwohner
-Hainsdorf im Schwarzautal , Österreich , 301 Einwohner
-Papendorf bei Pasewalk , Deutschland , 303 Einwohner
-Wieblitz-Eversdorf , Deutschland , 303 Einwohner
-Gollensdorf , Deutschland , 304 Einwohner
-Siegersdorf bei Herberstein , Österreich , 304 Einwohner
-Wedendorf , Deutschland , 305 Einwohner
-Wiebelsdorf , Deutschland , 305 Einwohner
-Leutersdorf bei Meiningen , Deutschland , 308 Einwohner
-Betteldorf , Deutschland , 311 Einwohner
-Großeutersdorf , Deutschland , 313 Einwohner
-Altendorf , Österreich , 313 Einwohner
-Eisendorf, Holstein , Deutschland , 315 Einwohner
-Gondorf bei Bitburg , Deutschland , 315 Einwohner
-Winseldorf , Deutschland , 315 Einwohner
-Gindorf, Eifel , Deutschland , 319 Einwohner
-Gransdorf , Deutschland , 319 Einwohner
-Friedensdorf bei Merseburg , Deutschland , 320 Einwohner
-Nister-Möhrendorf , Deutschland , 322 Einwohner
-Schöndorf bei Schleiz , Deutschland , 322 Einwohner
-Bölsdorf , Deutschland , 325 Einwohner
-Dalkendorf , Deutschland , 327 Einwohner
-Neundorf (bei Schleiz) , Deutschland , 327 Einwohner
-Mühledorf (SO) , Schweiz , 328 Einwohner
-Volkmannsdorf bei Schleiz , Deutschland , 331 Einwohner
-Badersdorf , Österreich , 331 Einwohner
-Sachsendorf bei Schönebeck , Deutschland , 335 Einwohner
-Frohnsdorf bei Altenburg , Deutschland , 336 Einwohner
-Tappendorf , Deutschland , 336 Einwohner
-Belau bei Wankendorf , Deutschland , 338 Einwohner
-Ruttersdorf-Lotschen , Deutschland , 338 Einwohner
-Wiendorf bei Könnern , Deutschland , 338 Einwohner
-Gillersdorf , Deutschland , 339 Einwohner
-Rottelsdorf bei Lutherstadt Ei , Deutschland , 339 Einwohner
-Merkendorf, Thüringen , Deutschland , 342 Einwohner
-Wolmersdorf , Deutschland , 345 Einwohner
-Reisdorf bei Bad Sulza , Deutschland , 348 Einwohner
-Niendorf bei Schönberg , Deutschland , 350 Einwohner
-Fredesdorf , Deutschland , 353 Einwohner
-Dalldorf, Kreis Herzogtum Laue , Deutschland , 354 Einwohner
-Kittendorf , Deutschland , 358 Einwohner
-Tasdorf , Deutschland , 361 Einwohner
-Bühnsdorf , Deutschland , 362 Einwohner
-Friesdorf bei Wippra , Deutschland , 365 Einwohner
-Wallendorf, Eifel , Deutschland , 365 Einwohner
-Höhndorf , Deutschland , 369 Einwohner
-Bettendorf bei Nastätten , Deutschland , 373 Einwohner
-Perlsdorf , Österreich , 374 Einwohner
-Dickendorf , Deutschland , 375 Einwohner
-Grabersdorf , Österreich , 375 Einwohner
-Weißendorf, Thüringen , Deutschland , 376 Einwohner
-Rudersdorf bei Sömmerda , Deutschland , 378 Einwohner
-Allendorf bei Rudolstadt , Deutschland , 380 Einwohner
-Rosdorf, Holstein , Deutschland , 380 Einwohner
-Schwinkendorf , Deutschland , 383 Einwohner
-Wiegendorf , Deutschland , 385 Einwohner
-Petersdorf bei Nordhausen , Deutschland , 388 Einwohner
-Maasdorf bei Köthen, Anhalt , Deutschland , 391 Einwohner
-Fuhlendorf bei Wiemersdorf , Deutschland , 392 Einwohner
-Alsdorf, Eifel , Deutschland , 393 Einwohner
-Behlendorf , Deutschland , 395 Einwohner
-Süderdorf , Deutschland , 396 Einwohner
-Zahrensdorf bei Sternberg , Deutschland , 400 Einwohner
-Woltersdorf bei Magdeburg , Deutschland , 401 Einwohner
-Mannsdorf an der Donau , Österreich , 403 Einwohner
-Hersdorf , Deutschland , 404 Einwohner
-Behnkendorf , Deutschland , 405 Einwohner
-Dietersdorf am Gnasbach , Österreich , 405 Einwohner
-Krusdorf , Österreich , 407 Einwohner
-Högersdorf , Deutschland , 411 Einwohner
-Tromsdorf , Deutschland , 411 Einwohner
-Libbesdorf , Deutschland , 413 Einwohner
-Borgdorf-Seedorf , Deutschland , 417 Einwohner
-Kleineutersdorf , Deutschland , 417 Einwohner
-Gundersdorf , Österreich , 417 Einwohner
-Dörsdorf, Taunus , Deutschland , 418 Einwohner
-Holstenniendorf , Deutschland , 418 Einwohner
-Bergisdorf , Deutschland , 419 Einwohner
-Mörsdorf bei Stadtroda , Deutschland , 424 Einwohner
-Gudendorf, Holstein , Deutschland , 425 Einwohner
-Holdorf bei Gadebusch , Deutschland , 425 Einwohner
-Diedorf / Rhön , Deutschland , 427 Einwohner
-Wakendorf I , Deutschland , 428 Einwohner
-Ackendorf bei Haldensleben , Deutschland , 430 Einwohner
-Fensdorf , Deutschland , 431 Einwohner
-Högsdorf , Deutschland , 431 Einwohner
-Paitzdorf , Deutschland , 435 Einwohner
-Moschendorf , Österreich , 435 Einwohner
-Stakendorf , Deutschland , 437 Einwohner
-Hartmannsdorf bei Gera , Deutschland , 442 Einwohner
-Hundsdorf bei Ransbach-Baumbac , Deutschland , 443 Einwohner
-Metelsdorf , Deutschland , 444 Einwohner
-Jesendorf bei Warin , Deutschland , 447 Einwohner
-Krugsdorf , Deutschland , 447 Einwohner
-Damendorf , Deutschland , 448 Einwohner
-Kapellendorf , Deutschland , 450 Einwohner
-Brodersdorf , Deutschland , 455 Einwohner
-Bösdorf bei Haldensleben , Deutschland , 456 Einwohner
-Crispendorf , Deutschland , 457 Einwohner
-Prasdorf , Deutschland , 460 Einwohner
-Schulendorf, Lauenburg , Deutschland , 466 Einwohner
-Ottendorf bei Stadtroda , Deutschland , 468 Einwohner
-Bendorf, Holstein , Deutschland , 473 Einwohner
-Renthendorf , Deutschland , 480 Einwohner
-Bickendorf, Eifel , Deutschland , 482 Einwohner
-Pohnsdorf bei Preetz , Deutschland , 487 Einwohner
-Lagendorf , Deutschland , 491 Einwohner
-Neudorf bei Passail , Österreich , 494 Einwohner
-Ollendorf bei Erfurt , Deutschland , 495 Einwohner
-Weitendorf bei Sternberg , Deutschland , 501 Einwohner
-Birgel bei Lissendorf , Deutschland , 504 Einwohner
-Rathjensdorf , Deutschland , 507 Einwohner
-Utendorf , Deutschland , 511 Einwohner
-Lippersdorf-Erdmannsdorf , Deutschland , 518 Einwohner
-Thulendorf , Deutschland , 518 Einwohner
-Neuendorf-Sachsenbande , Deutschland , 519 Einwohner
-Sankt Ruprecht - Falkendorf , Österreich , 520 Einwohner
-Muggendorf , Österreich , 524 Einwohner
-Behrendorf (Altmark) , Deutschland , 526 Einwohner
-Geschendorf , Deutschland , 527 Einwohner
-Wohlsdorf bei Bernburg , Deutschland , 527 Einwohner
-Drohndorf , Deutschland , 529 Einwohner
-Hinsdorf , Deutschland , 529 Einwohner
-Kloster Neuendorf , Deutschland , 531 Einwohner
-Kaisersdorf , Österreich , 531 Einwohner
-Ludorf , Deutschland , 533 Einwohner
-Seedorf, Kreis Herzogtum Lauen , Deutschland , 533 Einwohner
-Roßdorf bei Genthin , Deutschland , 534 Einwohner
-Almdorf , Deutschland , 535 Einwohner
-Amsdorf , Deutschland , 536 Einwohner
-Walkendorf , Deutschland , 536 Einwohner
-Teschendorf bei Neubrandenburg , Deutschland , 537 Einwohner
-Diensdorf-Radlow , Deutschland , 540 Einwohner
-Quendorf , Deutschland , 540 Einwohner
-Beschendorf , Deutschland , 542 Einwohner
-Aedermannsdorf , Schweiz , 543 Einwohner
-Pragsdorf , Deutschland , 544 Einwohner
-Boiensdorf , Deutschland , 545 Einwohner
-Berndorf, Eifel , Deutschland , 547 Einwohner
-Naundorf bei Altenburg , Deutschland , 550 Einwohner
-Storbeck-Frankendorf , Deutschland , 551 Einwohner
-Laasdorf , Deutschland , 554 Einwohner
-Deutsch Jahrndorf , Österreich , 555 Einwohner
-Ellerdorf , Deutschland , 557 Einwohner
-Biersdorf am See , Deutschland , 561 Einwohner
-Raasdorf , Österreich , 562 Einwohner
-Jakobsdorf bei Stralsund , Deutschland , 566 Einwohner
-Wormsdorf , Deutschland , 567 Einwohner
-Maierdorf , Österreich , 568 Einwohner
-Gönnersdorf bei Gerolstein , Deutschland , 571 Einwohner
-Madlitz-Wilmersdorf , Deutschland , 571 Einwohner
-Wendisch Baggendorf , Deutschland , 579 Einwohner
-Schülldorf , Deutschland , 580 Einwohner
-Harbach bei Betzdorf , Deutschland , 582 Einwohner
-Lackendorf , Österreich , 582 Einwohner
-Helmsdorf bei Leinefelde , Deutschland , 583 Einwohner
-Kördorf , Deutschland , 588 Einwohner
-Grunow-Dammendorf , Deutschland , 591 Einwohner
-Bünsdorf , Deutschland , 593 Einwohner
-Neuendorf, Altmark , Deutschland , 593 Einwohner
-Leitersdorf im Raabtal , Österreich , 593 Einwohner
-Dorf , Schweiz , 593 Einwohner
-Feusdorf , Deutschland , 597 Einwohner
-Schweindorf, Harlingerland , Deutschland , 599 Einwohner
-Kirchdorf bei Grimmen , Deutschland , 602 Einwohner
-Latendorf , Deutschland , 602 Einwohner
-Behrensdorf (Ostsee) , Deutschland , 604 Einwohner
-Behrendorf bei Husum , Deutschland , 606 Einwohner
-Splietsdorf , Deutschland , 606 Einwohner
-Krensdorf , Österreich , 607 Einwohner
-Rethwisch bei Lägerdorf , Deutschland , 608 Einwohner
-Kirchdorf am Inn , Österreich , 611 Einwohner
-Augsdorf , Deutschland , 612 Einwohner
-Reinsdorf bei Naumburg , Deutschland , 612 Einwohner
-Ratschendorf , Österreich , 613 Einwohner
-Ehndorf , Deutschland , 615 Einwohner
-Boßdorf , Deutschland , 617 Einwohner
-Dillendorf, Hunsrück , Deutschland , 617 Einwohner
-Deyelsdorf , Deutschland , 619 Einwohner
-Reichendorf , Österreich , 621 Einwohner
-Dorfstetten , Österreich , 627 Einwohner
-Loitzendorf , Deutschland , 628 Einwohner
-Seedorf bei Zeven , Deutschland , 630 Einwohner
-Niendorf / Stecknitz , Deutschland , 631 Einwohner
-Tonndorf bei Bad Berka , Deutschland , 631 Einwohner
-Horstdorf , Deutschland , 638 Einwohner
-Beiersdorf-Freudenberg , Deutschland , 641 Einwohner
-Ballendorf (Württemberg) , Deutschland , 643 Einwohner
-Norddorf, Amrum , Deutschland , 643 Einwohner
-Groß Niendorf, Holstein , Deutschland , 645 Einwohner
-Althüttendorf , Deutschland , 646 Einwohner
-Lelkendorf , Deutschland , 646 Einwohner
-Perasdorf , Deutschland , 647 Einwohner
-Lüttchendorf , Deutschland , 649 Einwohner
-Nordermeldorf , Deutschland , 649 Einwohner
-Gönnersdorf, Kreis Ahrweiler , Deutschland , 654 Einwohner
-Pöttelsdorf , Österreich , 657 Einwohner
-Nenndorf, Ostfriesland , Deutschland , 659 Einwohner
-Krakaudorf , Österreich , 659 Einwohner
-Hubersdorf , Schweiz , 664 Einwohner
-Dienersdorf , Österreich , 665 Einwohner
-Neudorf bei Quedlinburg , Deutschland , 666 Einwohner
-Blaindorf , Österreich , 669 Einwohner
-Niederndorferberg , Österreich , 674 Einwohner
-Tiefenbach bei Kaindorf , Österreich , 677 Einwohner
-Wernersdorf , Österreich , 677 Einwohner
-Frutten-Gießelsdorf , Österreich , 682 Einwohner
-Behnsdorf , Deutschland , 685 Einwohner
-Meggerdorf , Deutschland , 685 Einwohner
-Struxdorf , Deutschland , 685 Einwohner
-Hirnsdorf , Österreich , 685 Einwohner
-Ungerdorf , Österreich , 685 Einwohner
-Drahnsdorf , Deutschland , 686 Einwohner
-Wittgendorf bei Zeitz, Elster , Deutschland , 686 Einwohner
-Allendorf, Rhein-Lahn-Kreis , Deutschland , 689 Einwohner
-Trockenborn-Wolfersdorf , Deutschland , 689 Einwohner
-Klausdorf bei Stralsund , Deutschland , 691 Einwohner
-Hainersdorf , Österreich , 691 Einwohner
-Nindorf bei Neumünster , Deutschland , 693 Einwohner
-Droßdorf bei Zeitz, Elster , Deutschland , 694 Einwohner
-Freirachdorf , Deutschland , 695 Einwohner
-Hornow-Wadelsdorf , Deutschland , 695 Einwohner
-Neundorf (bei Lobenstein) , Deutschland , 703 Einwohner
-Wattendorf, Oberfranken , Deutschland , 704 Einwohner
-Neversdorf , Deutschland , 709 Einwohner
-Lödersdorf , Österreich , 709 Einwohner
-Alberndorf im Pulkautal , Österreich , 710 Einwohner
-Grammendorf , Deutschland , 711 Einwohner
-Neudorf bei Parndorf , Österreich , 712 Einwohner
-Roßdorf bei Schmalkalden , Deutschland , 714 Einwohner
-Mertendorf bei Naumburg , Deutschland , 716 Einwohner
-Poppendorf , Österreich , 718 Einwohner
-Mörsdorf, Hunsrück , Deutschland , 719 Einwohner
-Rietzneuendorf-Staakow , Deutschland , 720 Einwohner
-Knorrendorf , Deutschland , 722 Einwohner
-Daldorf , Deutschland , 725 Einwohner
-Halenbeck-Rohlsdorf , Deutschland , 728 Einwohner
-Lühmannsdorf , Deutschland , 729 Einwohner
-Eggendorf im Traunkreis , Österreich , 731 Einwohner
-Langendorf, Elbe , Deutschland , 733 Einwohner
-Harmsdorf, Holstein , Deutschland , 735 Einwohner
-Meßdorf , Deutschland , 738 Einwohner
-Bottmersdorf , Deutschland , 740 Einwohner
-Emmendorf , Deutschland , 741 Einwohner
-Heygendorf , Deutschland , 742 Einwohner
-Golmsdorf , Deutschland , 743 Einwohner
-Königsdorf , Österreich , 743 Einwohner
-Altdorf, Pfalz , Deutschland , 746 Einwohner
-Grebs-Niendorf , Deutschland , 752 Einwohner
-Schwerinsdorf , Deutschland , 755 Einwohner
-Oberdorf am Hochegg , Österreich , 755 Einwohner
-Velm-Götzendorf , Österreich , 755 Einwohner
-Poppendorf bei Rostock , Deutschland , 759 Einwohner
-Bocksdorf , Österreich , 771 Einwohner
-Frelsdorf , Deutschland , 774 Einwohner
-Latdorf , Deutschland , 776 Einwohner
-Groß Naundorf bei Annaburg , Deutschland , 779 Einwohner
-Irndorf , Deutschland , 780 Einwohner
-Cursdorf , Deutschland , 781 Einwohner
-Steinsdorf bei Gera , Deutschland , 785 Einwohner
-Badendorf, Holstein , Deutschland , 786 Einwohner
-Wiendorf bei Bützow , Deutschland , 788 Einwohner
-Geversdorf, Niederelbe , Deutschland , 789 Einwohner
-Johnsdorf-Brunn , Österreich , 790 Einwohner
-Kaufdorf , Schweiz , 790 Einwohner
-Oberloisdorf , Österreich , 803 Einwohner
-Schachendorf , Österreich , 803 Einwohner
-Frauendorf, Oberlausitz , Deutschland , 806 Einwohner
-Westdorf bei Aschersleben , Deutschland , 806 Einwohner
-Ziegendorf , Deutschland , 808 Einwohner
-Schöndorf, Ruwer , Deutschland , 810 Einwohner
-Kausen bei Betzdorf , Deutschland , 811 Einwohner
-Schackendorf bei Bad Segeberg , Deutschland , 814 Einwohner
-Wißmannsdorf , Deutschland , 819 Einwohner
-Hannersdorf , Österreich , 819 Einwohner
-Kirchdorf (BE) , Schweiz , 819 Einwohner
-Bokensdorf , Deutschland , 826 Einwohner
-Natendorf , Deutschland , 829 Einwohner
-Hausneindorf , Deutschland , 831 Einwohner
-Willendorf , Österreich , 835 Einwohner
-Amesdorf , Deutschland , 836 Einwohner
-Petersdorf II , Österreich , 839 Einwohner
-Werlaburgdorf , Deutschland , 840 Einwohner
-Ottendorf bei Kiel , Deutschland , 844 Einwohner
-Gremersdorf-Buchholz , Deutschland , 848 Einwohner
-Rückersdorf bei Gera , Deutschland , 856 Einwohner
-Nikolsdorf , Österreich , 862 Einwohner
-Oersdorf bei Neumünster , Deutschland , 867 Einwohner
-Vachdorf , Deutschland , 867 Einwohner
-Biendorf bei Bernburg , Deutschland , 868 Einwohner
-Ellenz-Poltersdorf , Deutschland , 870 Einwohner
-Schwasdorf , Deutschland , 870 Einwohner
-Neuendorf, Main , Deutschland , 875 Einwohner
-Trautmannsdorf in Oststeiermar , Österreich , 876 Einwohner
-Gerersdorf , Österreich , 878 Einwohner
-Donndorf, Unstrut , Deutschland , 882 Einwohner
-Piringsdorf , Österreich , 893 Einwohner
-Holldorf , Deutschland , 899 Einwohner
-Hohenruppersdorf , Österreich , 900 Einwohner
-Kirchdorf, Kreis Kelheim , Deutschland , 902 Einwohner
-Schillsdorf , Deutschland , 902 Einwohner
-Sieversdorf-Hohenofen , Deutschland , 908 Einwohner
-Neuendorf bei Elmshorn , Deutschland , 909 Einwohner
-Schlammersdorf, Oberpfalz , Deutschland , 910 Einwohner
-Walsdorf, Eifel , Deutschland , 910 Einwohner
-Nossendorf , Deutschland , 915 Einwohner
-Oettersdorf , Deutschland , 915 Einwohner
-Groß Mohrdorf , Deutschland , 917 Einwohner
-Reichmannsdorf bei Neuhaus am  , Deutschland , 922 Einwohner
-Hartmannsdorf bei Eisenberg , Deutschland , 923 Einwohner
-Kattendorf , Deutschland , 923 Einwohner
-Wengelsdorf , Deutschland , 924 Einwohner
-Waldorf, Kreis Ahrweiler , Deutschland , 926 Einwohner
-Zagersdorf , Österreich , 926 Einwohner
-Schönberg (Kreis Mühldorf am I , Deutschland , 929 Einwohner
-Waldsieversdorf , Deutschland , 931 Einwohner
-Steindorf, Paar , Deutschland , 944 Einwohner
-Mühldorf , Österreich , 945 Einwohner
-Schleedorf , Österreich , 951 Einwohner
-Hermsdorf bei Ruhland , Deutschland , 952 Einwohner
-Holzdorf bei Eckernförde , Deutschland , 953 Einwohner
-Meiseldorf , Österreich , 957 Einwohner
-Altendorf bei Nabburg , Deutschland , 959 Einwohner
-Reinsdorf bei Artern , Deutschland , 959 Einwohner
-Bundorf , Deutschland , 962 Einwohner
-Suddendorf , Deutschland , 964 Einwohner
-Gossendorf , Österreich , 964 Einwohner
-Weikersdorf am Steinfelde , Österreich , 967 Einwohner
-Hohendorf bei Wolgast , Deutschland , 968 Einwohner
-Fuhlendorf, Darß , Deutschland , 969 Einwohner
-Fockendorf bei Altenburg , Deutschland , 971 Einwohner
-Beendorf bei Haldensleben , Deutschland , 973 Einwohner
-Reichenbach bei Hermsdorf , Deutschland , 974 Einwohner
-Weitendorf bei Güstrow , Deutschland , 974 Einwohner
-Großwoltersdorf , Deutschland , 977 Einwohner
-Langenwolschendorf , Deutschland , 977 Einwohner
-Ollersdorf im Burgenland , Österreich , 983 Einwohner
-Heidersdorf , Deutschland , 984 Einwohner
-Stetteldorf am Wagram , Österreich , 991 Einwohner
-Rastdorf, Hümmling , Deutschland , 995 Einwohner
-Merzdorf bei Elsterwerda , Deutschland , 996 Einwohner
-Marienrachdorf , Deutschland , 997 Einwohner
-Nemsdorf-Göhrendorf , Deutschland , 1000 Einwohner
-Dorf an der Pram , Österreich , 1006 Einwohner
-Großbardorf , Deutschland , 1008 Einwohner
-Oldendorf (Luhe) , Deutschland , 1012 Einwohner
-Greisdorf , Österreich , 1013 Einwohner
-Pernersdorf , Österreich , 1013 Einwohner
-Wallendorf (Luppe) , Deutschland , 1014 Einwohner
-Welschneudorf , Deutschland , 1019 Einwohner
-Bairisch Kölldorf , Österreich , 1019 Einwohner
-Eltendorf , Österreich , 1023 Einwohner
-Eyendorf, Lüneburger Heide , Deutschland , 1027 Einwohner
-Todendorf, Kreis Stormarn , Deutschland , 1029 Einwohner
-Hochwolkersdorf , Österreich , 1034 Einwohner
-Buch-Geiseldorf , Österreich , 1036 Einwohner
-Biendorf bei Bad Doberan , Deutschland , 1037 Einwohner
-Markt Taschendorf , Deutschland , 1041 Einwohner
-Riepsdorf , Deutschland , 1042 Einwohner
-Gerersdorf-Sulz , Österreich , 1042 Einwohner
-Brokdorf , Deutschland , 1043 Einwohner
-Muckendorf-Wipfing , Österreich , 1043 Einwohner
-Brekendorf , Deutschland , 1045 Einwohner
-Dernbach bei Dierdorf , Deutschland , 1051 Einwohner
-Mixdorf , Deutschland , 1051 Einwohner
-Herschdorf , Deutschland , 1052 Einwohner
-Neudorf-Bornstein , Deutschland , 1054 Einwohner
-Lissendorf , Deutschland , 1055 Einwohner
-Woltersdorf, Niedersachsen , Deutschland , 1055 Einwohner
-Neudorf , Schweiz , 1058 Einwohner
-Betzendorf, Kreis Lüneburg , Deutschland , 1061 Einwohner
-Quellendorf , Deutschland , 1062 Einwohner
-Ummendorf, Börde , Deutschland , 1063 Einwohner
-Scharndorf , Österreich , 1063 Einwohner
-Pillichsdorf , Österreich , 1064 Einwohner
-Apfeldorf , Deutschland , 1071 Einwohner
-Sindelsdorf , Deutschland , 1071 Einwohner
-Dudeldorf , Deutschland , 1073 Einwohner
-Roggendorf bei Gadebusch , Deutschland , 1073 Einwohner
-Rugendorf , Deutschland , 1073 Einwohner
-Oberdorf im Burgenland , Österreich , 1073 Einwohner
-Raxendorf , Österreich , 1073 Einwohner
-Gabersdorf , Österreich , 1076 Einwohner
-Kröppelshagen-Fahrendorf , Deutschland , 1080 Einwohner
-Hermsdorf / Osterzgebirge , Deutschland , 1082 Einwohner
-Harsdorf, Oberfranken , Deutschland , 1085 Einwohner
-Lindendorf , Deutschland , 1087 Einwohner
-Großnaundorf , Deutschland , 1091 Einwohner
-Hassendorf bei Rotenburg an de , Deutschland , 1091 Einwohner
-Trebendorf bei Weißwasser , Deutschland , 1091 Einwohner
-Nußdorf am Attersee , Österreich , 1093 Einwohner
-Kreba-Neudorf , Deutschland , 1099 Einwohner
-Sitzendorf , Deutschland , 1099 Einwohner
-Kuhlen-Wendorf , Deutschland , 1100 Einwohner
-Rathmannsdorf bei Pirna , Deutschland , 1103 Einwohner
-Guntersdorf , Österreich , 1103 Einwohner
-Wendorf bei Stralsund , Deutschland , 1107 Einwohner
-Sommersdorf, Börde , Deutschland , 1108 Einwohner
-Heringsdorf, Holstein , Deutschland , 1111 Einwohner
-Antdorf , Deutschland , 1113 Einwohner
-Gattendorf , Österreich , 1113 Einwohner
-Mettendorf, Eifel , Deutschland , 1126 Einwohner
-Zarrendorf , Deutschland , 1131 Einwohner
-Schöfflisdorf , Schweiz , 1133 Einwohner
-Herrngiersdorf , Deutschland , 1136 Einwohner
-Merkendorf , Österreich , 1144 Einwohner
-Ebersdorf bei Bremervörde , Deutschland , 1146 Einwohner
-Schlagsdorf bei Gadebusch , Deutschland , 1151 Einwohner
-Kühndorf bei Suhl , Deutschland , 1152 Einwohner
-Leitzersdorf , Österreich , 1155 Einwohner
-Üdersdorf , Deutschland , 1158 Einwohner
-Wolsdorf, Kreis Helmstedt , Deutschland , 1161 Einwohner
-Litzelsdorf , Österreich , 1162 Einwohner
-Micheldorf , Österreich , 1164 Einwohner
-Nindorf bei Meldorf , Deutschland , 1165 Einwohner
-Breddorf , Deutschland , 1166 Einwohner
-Oldendorf, Holstein , Deutschland , 1167 Einwohner
-Wenzendorf , Deutschland , 1168 Einwohner
-Amaliendorf-Aalfang , Österreich , 1168 Einwohner
-Eickendorf bei Schönebeck , Deutschland , 1172 Einwohner
-Schachdorf Ströbeck , Deutschland , 1172 Einwohner
-Leithaprodersdorf , Österreich , 1172 Einwohner
-Tüttendorf , Deutschland , 1177 Einwohner
-Gosdorf , Österreich , 1177 Einwohner
-Mogersdorf , Österreich , 1177 Einwohner
-Ebersdorf , Österreich , 1179 Einwohner
-Mogendorf , Deutschland , 1181 Einwohner
-Etzersdorf-Rollsdorf , Österreich , 1185 Einwohner
-Gnadendorf , Österreich , 1188 Einwohner
-Rossatz-Arnsdorf , Österreich , 1189 Einwohner
-Thundorf , Schweiz , 1190 Einwohner
-Viehdorf , Österreich , 1194 Einwohner
-Günthersdorf bei Merseburg , Deutschland , 1199 Einwohner
-Gattendorf, Oberfranken , Deutschland , 1200 Einwohner
-Thundorf in Unterfranken , Deutschland , 1200 Einwohner
-Dobersdorf, Holstein , Deutschland , 1202 Einwohner
-Gersdorf an der Feistritz , Österreich , 1203 Einwohner
-Malgersdorf , Deutschland , 1209 Einwohner
-Angersdorf bei Halle, Saale , Deutschland , 1213 Einwohner
-Deutschneudorf , Deutschland , 1215 Einwohner
-Schlehdorf , Deutschland , 1215 Einwohner
-Zelking-Matzleinsdorf , Österreich , 1219 Einwohner
-Frankenau-Unterpullendorf , Österreich , 1222 Einwohner
-Mariasdorf , Österreich , 1225 Einwohner
-Reuth bei Erbendorf , Deutschland , 1233 Einwohner
-Haselsdorf-Tobelbad , Österreich , 1238 Einwohner
-Loipersdorf-Kitzladen , Österreich , 1240 Einwohner
-Zemendorf-Stöttera , Österreich , 1242 Einwohner
-Dettmannsdorf bei Bad Sülze , Deutschland , 1243 Einwohner
-Palterndorf-Dobermannsdorf , Österreich , 1249 Einwohner
-Tattendorf , Österreich , 1261 Einwohner
-Lichterfeld-Schacksdorf , Deutschland , 1262 Einwohner
-Nottensdorf , Deutschland , 1262 Einwohner
-Sulzdorf an der Lederhecke , Deutschland , 1264 Einwohner
-Dürrhennersdorf , Deutschland , 1265 Einwohner
-Eggersdorf bei Schönebeck , Deutschland , 1265 Einwohner
-Müllendorf , Österreich , 1270 Einwohner
-Dorfhain , Deutschland , 1279 Einwohner
-Empersdorf , Österreich , 1279 Einwohner
-Rodersdorf , Schweiz , 1279 Einwohner
-Groß Schacksdorf-Simmersdorf , Deutschland , 1281 Einwohner
-Hartmannsdorf-Reichenau , Deutschland , 1283 Einwohner
-Wallmenroth bei Betzdorf , Deutschland , 1285 Einwohner
-Georgsdorf , Deutschland , 1288 Einwohner
-Kirchdorf bei Haag , Deutschland , 1290 Einwohner
-Weigendorf, Oberpfalz , Deutschland , 1290 Einwohner
-Nappersdorf-Kammersdorf , Österreich , 1292 Einwohner
-Drosendorf-Zissersdorf , Österreich , 1293 Einwohner
-Hamdorf bei Rendsburg , Deutschland , 1295 Einwohner
-Drelsdorf , Deutschland , 1296 Einwohner
-Oberostendorf , Deutschland , 1296 Einwohner
-Bad Tatzmannsdorf , Österreich , 1301 Einwohner
-Taufkirchen, Kreis Mühldorf am , Deutschland , 1304 Einwohner
-Matzendorf , Schweiz , 1305 Einwohner
-Seibersdorf , Österreich , 1309 Einwohner
-Weißdorf , Deutschland , 1312 Einwohner
-Weißenborn bei Hermsdorf , Deutschland , 1312 Einwohner
-Wilhelmsdorf, Mittelfranken , Deutschland , 1313 Einwohner
-Mettersdorf am Saßbach , Österreich , 1316 Einwohner
-Bliesdorf bei Bad Freienwalde , Deutschland , 1334 Einwohner
-Porschdorf , Deutschland , 1343 Einwohner
-Bausendorf , Deutschland , 1353 Einwohner
-Beiersdorf bei Löbau , Deutschland , 1354 Einwohner
-Rittersdorf, Eifel , Deutschland , 1354 Einwohner
-Ziesendorf , Deutschland , 1360 Einwohner
-Arisdorf , Schweiz , 1360 Einwohner
-Tautenhain bei Hermsdorf , Deutschland , 1367 Einwohner
-Dorfbeuern , Österreich , 1371 Einwohner
-Sebersdorf , Österreich , 1373 Einwohner
-Niederdorf bei Stollberg, Erzg , Deutschland , 1376 Einwohner
-Loipersdorf bei Fürstenfeld , Österreich , 1376 Einwohner
-Statzendorf , Österreich , 1377 Einwohner
-Neudorf bei Staatz , Österreich , 1380 Einwohner
-Olbendorf , Österreich , 1385 Einwohner
-Mielkendorf , Deutschland , 1387 Einwohner
-Ringelsdorf-Niederabsdorf , Österreich , 1393 Einwohner
-Grattersdorf , Deutschland , 1404 Einwohner
-Nahrendorf , Deutschland , 1404 Einwohner
-Oberndorf bei Schwanenstadt , Österreich , 1404 Einwohner
-Wakendorf bei Henstedt-Ulzburg , Deutschland , 1408 Einwohner
-Inzersdorf-Getzersdorf , Österreich , 1410 Einwohner
-Bensdorf , Deutschland , 1411 Einwohner
-Moosdorf , Österreich , 1418 Einwohner
-Abtsdorf bei Wittenberg , Deutschland , 1424 Einwohner
-Altdorf bei Nürtingen , Deutschland , 1430 Einwohner
-Großwilfersdorf , Österreich , 1436 Einwohner
-Kaindorf , Österreich , 1438 Einwohner
-Hennersdorf , Österreich , 1440 Einwohner
-Mühldorf , Österreich , 1442 Einwohner
-Groß-Engersdorf , Österreich , 1448 Einwohner
-Gräfendorf, Unterfranken , Deutschland , 1452 Einwohner
-Hilbersdorf bei Freiberg , Deutschland , 1456 Einwohner
-Zeschdorf , Deutschland , 1456 Einwohner
-Klausen-Leopoldsdorf , Österreich , 1463 Einwohner
-Gremersdorf, Holstein , Deutschland , 1480 Einwohner
-Weitendorf , Österreich , 1481 Einwohner
-Prinzersdorf , Österreich , 1483 Einwohner
-Ottendorf an der Rittschein , Österreich , 1489 Einwohner
-Hartmannsdorf bei Kirchberg , Deutschland , 1494 Einwohner
-Westendorf bei Donauwörth , Deutschland , 1500 Einwohner
-Gremsdorf , Deutschland , 1501 Einwohner
-Daisendorf , Deutschland , 1508 Einwohner
-Emkendorf bei Rendsburg , Deutschland , 1509 Einwohner
-Seedorf (UR) , Schweiz , 1509 Einwohner
-Wiemersdorf , Deutschland , 1522 Einwohner
-Lanzendorf , Österreich , 1530 Einwohner
-Gammelsdorf , Deutschland , 1532 Einwohner
-Priesendorf , Deutschland , 1532 Einwohner
-Großwarasdorf , Österreich , 1537 Einwohner
-Friedersdorf bei Löbau , Deutschland , 1542 Einwohner
-Beckedorf bei Stadthagen , Deutschland , 1552 Einwohner
-Quitzdorf am See , Deutschland , 1554 Einwohner
-Nickelsdorf , Österreich , 1554 Einwohner
-Poxdorf, Oberfranken , Deutschland , 1559 Einwohner
-Stralendorf bei Schwerin , Deutschland , 1568 Einwohner
-Zappendorf , Deutschland , 1569 Einwohner
-Nußdorf ob der Traisen , Österreich , 1575 Einwohner
-Kromsdorf , Deutschland , 1576 Einwohner
-Oberndorf, Oste , Deutschland , 1580 Einwohner
-Tirpersdorf , Deutschland , 1586 Einwohner
-Borstendorf , Deutschland , 1587 Einwohner
-Kasseedorf , Deutschland , 1587 Einwohner
-Bollendorf , Deutschland , 1588 Einwohner
-Sierksdorf , Deutschland , 1591 Einwohner
-Teesdorf , Österreich , 1600 Einwohner
-Berndorf bei Salzburg , Österreich , 1603 Einwohner
-Putzleinsdorf , Österreich , 1604 Einwohner
-Oberdorf (SO) , Schweiz , 1612 Einwohner
-Euerdorf , Deutschland , 1614 Einwohner
-Buchdorf , Deutschland , 1616 Einwohner
-Hermsdorf bei Wolmirstedt , Deutschland , 1617 Einwohner
-Riedlingsdorf , Österreich , 1618 Einwohner
-Großhennersdorf , Deutschland , 1620 Einwohner
-Rentweinsdorf , Deutschland , 1621 Einwohner
-Bösdorf bei Plön , Deutschland , 1627 Einwohner
-Duggendorf , Deutschland , 1635 Einwohner
-Schinznach Dorf , Schweiz , 1637 Einwohner
-Pischelsdorf am Engelbach , Österreich , 1639 Einwohner
-Purgstall bei Eggersdorf , Österreich , 1641 Einwohner
-Bliedersdorf , Deutschland , 1650 Einwohner
-Laupersdorf , Schweiz , 1651 Einwohner
-Haugsdorf , Österreich , 1654 Einwohner
-Stronsdorf , Österreich , 1655 Einwohner
-Ziltendorf , Deutschland , 1668 Einwohner
-Reinhardtsdorf-Schöna , Deutschland , 1672 Einwohner
-Mertesdorf , Deutschland , 1678 Einwohner
-Pilgersdorf , Österreich , 1679 Einwohner
-Stedesdorf , Deutschland , 1680 Einwohner
-Elsdorf-Westermühlen , Deutschland , 1688 Einwohner
-Hormersdorf, Erzgebirge , Deutschland , 1689 Einwohner
-Dorfgastein , Österreich , 1691 Einwohner
-Asendorf, Nordheide , Deutschland , 1692 Einwohner
-Wipperdorf , Deutschland , 1693 Einwohner
-Schlaitdorf , Deutschland , 1694 Einwohner
-Haseldorf , Deutschland , 1711 Einwohner
-Leubsdorf, Rhein , Deutschland , 1711 Einwohner
-Oelixdorf , Deutschland , 1713 Einwohner
-Petersdorf bei Aichach , Deutschland , 1715 Einwohner
-Baierdorf bei Anger , Österreich , 1715 Einwohner
-Attendorf , Österreich , 1718 Einwohner
-Günselsdorf , Österreich , 1727 Einwohner
-Melsdorf , Deutschland , 1731 Einwohner
-Rohrendorf bei Krems , Österreich , 1737 Einwohner
-Emmersdorf an der Donau , Österreich , 1738 Einwohner
-Mitterndorf an der Fischa , Österreich , 1740 Einwohner
-Jacobsdorf, Mark , Deutschland , 1749 Einwohner
-Rangersdorf , Österreich , 1753 Einwohner
-Lendorf , Österreich , 1759 Einwohner
-Mischendorf , Österreich , 1763 Einwohner
-Matzendorf-Hölles , Österreich , 1765 Einwohner
-Niedercunnersdorf , Deutschland , 1768 Einwohner
-Absdorf , Österreich , 1769 Einwohner
-Trausdorf an der Wulka , Österreich , 1775 Einwohner
-Weppersdorf , Österreich , 1775 Einwohner
-Inzersdorf im Kremstal , Österreich , 1788 Einwohner
-Blekendorf , Deutschland , 1796 Einwohner
-Neuendorf , Schweiz , 1796 Einwohner
-Vachendorf, Kreis Traunstein,  , Deutschland , 1804 Einwohner
-Hatzendorf , Österreich , 1808 Einwohner
-Mauterndorf , Österreich , 1808 Einwohner
-Alsdorf, Sieg , Deutschland , 1809 Einwohner
-Winzendorf-Muthmannsdorf , Österreich , 1810 Einwohner
-Eisdorf, Harz , Deutschland , 1818 Einwohner
-Patersdorf, Niederbayern , Deutschland , 1820 Einwohner
-Unterweitersdorf , Österreich , 1821 Einwohner
-Albersdorf-Prebuch , Österreich , 1822 Einwohner
-Schwadorf , Österreich , 1835 Einwohner
-Ludersdorf-Wilfersdorf , Österreich , 1843 Einwohner
-Nauendorf bei Halle , Deutschland , 1845 Einwohner
-Hergisdorf , Deutschland , 1849 Einwohner
-Mannersdorf an der Rabnitz , Österreich , 1850 Einwohner
-Baldramsdorf , Österreich , 1851 Einwohner
-Ludmannsdorf , Österreich , 1851 Einwohner
-Rasdorf bei Hünfeld , Deutschland , 1855 Einwohner
-Rückersdorf bei Doberlug-Kirch , Deutschland , 1857 Einwohner
-Milmersdorf , Deutschland , 1860 Einwohner
-Berthelsdorf bei Herrnhut , Deutschland , 1863 Einwohner
-Zillingdorf , Österreich , 1870 Einwohner
-Schönkirchen-Reyersdorf , Österreich , 1871 Einwohner
-Kobersdorf , Österreich , 1872 Einwohner
-Dorfchemnitz bei Sayda , Deutschland , 1873 Einwohner
-Handorf, Winsener Marsch , Deutschland , 1873 Einwohner
-Westendorf bei Kaufbeuren , Deutschland , 1875 Einwohner
-Wulkaprodersdorf , Österreich , 1879 Einwohner
-Schönau-Berzdorf auf dem Eigen , Deutschland , 1887 Einwohner
-Markersdorf-Haindorf , Österreich , 1900 Einwohner
-Ahlsdorf bei Lutherstadt Eisle , Deutschland , 1905 Einwohner
-Donnersdorf , Deutschland , 1907 Einwohner
-Götzendorf an der Leitha , Österreich , 1909 Einwohner
-Leutesdorf, Rhein , Deutschland , 1914 Einwohner
-Dorfprozelten , Deutschland , 1926 Einwohner
-Niederdorf , Schweiz , 1933 Einwohner
-Spardorf , Deutschland , 1940 Einwohner
-Weikendorf , Österreich , 1940 Einwohner
-Zihlschlacht-Sitterdorf , Schweiz , 1942 Einwohner
-Rohrdorf bei Nagold , Deutschland , 1945 Einwohner
-Münsterdorf , Deutschland , 1952 Einwohner
-Narsdorf , Deutschland , 1957 Einwohner
-Hadersdorf-Kammern , Österreich , 1960 Einwohner
-Kurort Jonsdorf , Deutschland , 1963 Einwohner
-Tarsdorf , Österreich , 1963 Einwohner
-Beetzendorf , Deutschland , 1967 Einwohner
-Oberndorf in Tirol , Österreich , 1969 Einwohner
-Zurndorf , Österreich , 1977 Einwohner
-Eggersdorf bei Graz , Österreich , 1980 Einwohner
-Leezdorf , Deutschland , 1984 Einwohner
-Friedersdorf bei Bitterfeld , Deutschland , 1990 Einwohner
-Reckendorf, Oberfranken , Deutschland , 1999 Einwohner
-Kirchdorf bei Sulingen , Deutschland , 2008 Einwohner
-Wilfersdorf , Österreich , 2008 Einwohner
-Maria-Lanzendorf , Österreich , 2014 Einwohner
-Mitterdorf an der Raab , Österreich , 2015 Einwohner
-Busdorf bei Schleswig , Deutschland , 2021 Einwohner
-Karsdorf, Unstrut , Deutschland , 2025 Einwohner
-Altendorf bei Bamberg , Deutschland , 2029 Einwohner
-Elsendorf in der Hallertau , Deutschland , 2031 Einwohner
-Langdorf bei Regen , Deutschland , 2033 Einwohner
-Podersdorf am See , Österreich , 2046 Einwohner
-Dorndorf-Steudnitz , Deutschland , 2049 Einwohner
-Selmsdorf , Deutschland , 2062 Einwohner
-Bad Waltersdorf , Österreich , 2068 Einwohner
-Sittersdorf , Österreich , 2072 Einwohner
-Werndorf , Österreich , 2072 Einwohner
-Danndorf, Niedersachsen , Deutschland , 2074 Einwohner
-Delingsdorf , Deutschland , 2074 Einwohner
-Hochdorf (Riß) , Deutschland , 2083 Einwohner
-Barendorf, Kreis Lüneburg , Deutschland , 2086 Einwohner
-Elsdorf, Niedersachsen , Deutschland , 2099 Einwohner
-Gedersdorf , Österreich , 2103 Einwohner
-Flecken Diesdorf , Deutschland , 2127 Einwohner
-Bahrdorf, Niedersachsen , Deutschland , 2137 Einwohner
-Ammerndorf , Deutschland , 2142 Einwohner
-Ladendorf , Österreich , 2160 Einwohner
-Kirchdorf im Wald , Deutschland , 2165 Einwohner
-Rudersdorf , Österreich , 2175 Einwohner
-Nußdorf am Haunsberg , Österreich , 2192 Einwohner
-Krottendorf , Österreich , 2201 Einwohner
-Prisdorf , Deutschland , 2209 Einwohner
-Großebersdorf , Österreich , 2213 Einwohner
-Persenbeug-Gottsdorf , Österreich , 2213 Einwohner
-Sitzendorf an der Schmida , Österreich , 2229 Einwohner
-Puschendorf , Deutschland , 2233 Einwohner
-Seedorf bei Bad Segeberg , Deutschland , 2236 Einwohner
-Pöndorf , Österreich , 2245 Einwohner
-Obercunnersdorf bei Löbau , Deutschland , 2262 Einwohner
-Nordendorf , Deutschland , 2266 Einwohner
-Ensdorf, Oberpfalz , Deutschland , 2277 Einwohner
-Neundorf (Anhalt) , Deutschland , 2288 Einwohner
-Münchendorf , Österreich , 2289 Einwohner
-Walldorf bei Meiningen , Deutschland , 2306 Einwohner
-Thiendorf , Deutschland , 2313 Einwohner
-Oberdorf (BL) , Schweiz , 2319 Einwohner
-Wolfersdorf, Oberbayern , Deutschland , 2327 Einwohner
-Gornsdorf , Deutschland , 2334 Einwohner
-Papendorf bei Rostock , Deutschland , 2343 Einwohner
-Paudorf , Österreich , 2349 Einwohner
-Osdorf bei Kiel , Deutschland , 2353 Einwohner
-Beckdorf , Deutschland , 2354 Einwohner
-Krottendorf-Gaisfeld , Österreich , 2365 Einwohner
-Oberndorf am Lech , Deutschland , 2373 Einwohner
-Heinsdorfergrund , Deutschland , 2386 Einwohner
-Leopoldsdorf im Marchfelde , Österreich , 2390 Einwohner
-Herzogsdorf , Österreich , 2392 Einwohner
-Ferndorf , Österreich , 2398 Einwohner
-Wullersdorf , Österreich , 2399 Einwohner
-Mitterdorf im Mürztal , Österreich , 2419 Einwohner
-Ziegra-Knobelsdorf , Deutschland , 2421 Einwohner
-Niederrohrdorf , Schweiz , 2443 Einwohner
-Nußdorf, Chiemgau , Deutschland , 2449 Einwohner
-Ennsdorf , Österreich , 2451 Einwohner
-Schattendorf , Österreich , 2451 Einwohner
-Kaindorf an der Sulm , Österreich , 2452 Einwohner
-Pischelsdorf in der Steiermark , Österreich , 2454 Einwohner
-Adelheidsdorf , Deutschland , 2478 Einwohner
-Sauldorf , Deutschland , 2493 Einwohner
-Benndorf bei Klostermansfeld , Deutschland , 2501 Einwohner
-Langendorf bei Weißenfels , Deutschland , 2510 Einwohner
-Niederndorf , Österreich , 2511 Einwohner
-Köstendorf , Österreich , 2516 Einwohner
-Ebermannsdorf , Deutschland , 2523 Einwohner
-Grafendorf bei Hartberg , Österreich , 2525 Einwohner
-Burgdorf bei Salzgitter , Deutschland , 2529 Einwohner
-Matzen-Raggendorf , Österreich , 2554 Einwohner
-Schorndorf, Oberpfalz , Deutschland , 2561 Einwohner
-Iffeldorf , Deutschland , 2567 Einwohner
-Fahrdorf , Deutschland , 2579 Einwohner
-Nußdorf am Inn , Deutschland , 2582 Einwohner
-Lalendorf , Deutschland , 2592 Einwohner
-Bernsdorf bei Hohenstein-Ernst , Deutschland , 2593 Einwohner
-Kasendorf, Oberfranken , Deutschland , 2596 Einwohner
-Zellerndorf , Österreich , 2608 Einwohner
-Walsdorf, Oberfranken , Deutschland , 2615 Einwohner
-Kirchdorf an der Amper , Deutschland , 2621 Einwohner
-Rengsdorf, Kreis Neuwied , Deutschland , 2622 Einwohner
-Niklasdorf , Österreich , 2634 Einwohner
-Lengdorf, Oberbayern , Deutschland , 2649 Einwohner
-Bertsdorf-Hörnitz , Deutschland , 2690 Einwohner
-Haundorf am Brombachsee , Deutschland , 2692 Einwohner
-Siegendorf im Burgenland , Österreich , 2701 Einwohner
-Trautmannsdorf an der Leitha , Österreich , 2701 Einwohner
-Naundorf bei Oschatz , Deutschland , 2714 Einwohner
-Kodersdorf , Deutschland , 2715 Einwohner
-Suhlendorf , Deutschland , 2731 Einwohner
-Lägerdorf , Deutschland , 2755 Einwohner
-Oldendorf, Kreis Stade , Deutschland , 2787 Einwohner
-Katsdorf , Österreich , 2791 Einwohner
-Teichwolframsdorf , Deutschland , 2798 Einwohner
-Bruckneudorf , Österreich , 2815 Einwohner
-Enzersdorf an der Fischa , Österreich , 2826 Einwohner
-Merkendorf, Mittelfranken , Deutschland , 2840 Einwohner
-Köttmannsdorf , Österreich , 2841 Einwohner
-Großweikersdorf , Österreich , 2856 Einwohner
-Uttendorf , Österreich , 2861 Einwohner
-Oberdorf (NW) , Schweiz , 2872 Einwohner
-Oberpullendorf , Österreich , 2882 Einwohner
-Jetzendorf , Deutschland , 2902 Einwohner
-Biedermannsdorf , Österreich , 2902 Einwohner
-Markt Hartmannsdorf , Österreich , 2908 Einwohner
-Poggersdorf , Österreich , 2923 Einwohner
-Helbedündorf , Deutschland , 2928 Einwohner
-Königsdorf, Oberbayern , Deutschland , 2932 Einwohner
-Göllersdorf , Österreich , 2932 Einwohner
-Hasle bei Burgdorf , Schweiz , 2948 Einwohner
-Großhartmannsdorf , Deutschland , 2952 Einwohner
-Niederdorfelden , Deutschland , 2959 Einwohner
-Mühldorf bei Feldbach , Österreich , 2960 Einwohner
-Wankendorf , Deutschland , 2975 Einwohner
-Katzelsdorf , Österreich , 2977 Einwohner
-Oberndorf an der Melk , Österreich , 2991 Einwohner
-Frasdorf , Deutschland , 3000 Einwohner
-Kamsdorf , Deutschland , 3024 Einwohner
-Wintersdorf bei Meuselwitz , Deutschland , 3039 Einwohner
-Asendorf bei Bruchhausen-Vilse , Deutschland , 3043 Einwohner
-Kaulsdorf, Saale , Deutschland , 3053 Einwohner
-Dorf Mecklenburg , Deutschland , 3055 Einwohner
-Dorndorf, Rhön , Deutschland , 3060 Einwohner
-Krumpendorf am Wörther See , Österreich , 3068 Einwohner
-Hochdorf-Assenheim , Deutschland , 3084 Einwohner
-Neudietendorf , Deutschland , 3086 Einwohner
-Dassendorf , Deutschland , 3088 Einwohner
-Mohlsdorf , Deutschland , 3131 Einwohner
-Seedorf (BE) , Schweiz , 3144 Einwohner
-Bad Mitterndorf , Österreich , 3168 Einwohner
-Seukendorf , Deutschland , 3180 Einwohner
-Nußdorf-Debant , Österreich , 3192 Einwohner
-Höckendorf bei Dippoldiswalde , Deutschland , 3197 Einwohner
-Gössendorf , Österreich , 3208 Einwohner
-Veilsdorf , Deutschland , 3226 Einwohner
-Pettendorf, Oberpfalz , Deutschland , 3275 Einwohner
-Mettenheim, Kreis Mühldorf am  , Deutschland , 3277 Einwohner
-Villingendorf , Deutschland , 3282 Einwohner
-Vordorf, Kreis Gifhorn , Deutschland , 3290 Einwohner
-Simmelsdorf , Deutschland , 3294 Einwohner
-Wünschendorf / Elster , Deutschland , 3302 Einwohner
-Ziersdorf , Österreich , 3310 Einwohner
-Großolbersdorf , Deutschland , 3312 Einwohner
-Helpfau-Uttendorf , Österreich , 3314 Einwohner
-Sierndorf , Österreich , 3338 Einwohner
-Oberrohrdorf , Schweiz , 3364 Einwohner
-Kobern-Gondorf , Deutschland , 3370 Einwohner
-Hunderdorf bei Bogen, Niederba , Deutschland , 3382 Einwohner
-Langendorf , Schweiz , 3400 Einwohner
-Kisdorf, Holstein , Deutschland , 3450 Einwohner
-Polling, Kreis Mühldorf am Inn , Deutschland , 3454 Einwohner
-Mondorf-les-Bains , Luxemburg , 3464 Einwohner
-Westendorf , Österreich , 3467 Einwohner
-Münchenbernsdorf , Deutschland , 3469 Einwohner
-Steinigtwolmsdorf , Deutschland , 3505 Einwohner
-Heßdorf, Mittelfranken , Deutschland , 3516 Einwohner
-Hoisdorf , Deutschland , 3521 Einwohner
-Rietz-Neuendorf , Deutschland , 3532 Einwohner
-Oberwaltersdorf , Österreich , 3547 Einwohner
-Epfendorf , Deutschland , 3550 Einwohner
-Hitzendorf , Österreich , 3560 Einwohner
-Pinsdorf , Österreich , 3561 Einwohner
-Schnelldorf, Mittelfranken , Deutschland , 3564 Einwohner
-Moosseedorf , Schweiz , 3584 Einwohner
-Großpetersdorf , Österreich , 3587 Einwohner
-Albersdorf, Holstein , Deutschland , 3588 Einwohner
-Kirchdorf in Tirol , Österreich , 3591 Einwohner
-Steindorf am Ossiacher See , Österreich , 3594 Einwohner
-Parndorf , Österreich , 3597 Einwohner
-Harmannsdorf , Österreich , 3601 Einwohner
-Loosdorf , Österreich , 3608 Einwohner
-Kirchdorf an der Iller , Deutschland , 3610 Einwohner
-Alberndorf in der Riedmark , Österreich , 3662 Einwohner
-Zwentendorf an der Donau , Österreich , 3684 Einwohner
-Piesendorf , Österreich , 3693 Einwohner
-Mannersdorf am Leithagebirge , Österreich , 3747 Einwohner
-Oberrot bei Gaildorf , Deutschland , 3749 Einwohner
-Sigmaringendorf , Deutschland , 3813 Einwohner
-Langenwetzendorf , Deutschland , 3904 Einwohner
-Schondorf am Ammersee , Deutschland , 3904 Einwohner
-Hallerndorf , Deutschland , 3933 Einwohner
-Wietzendorf , Deutschland , 3950 Einwohner
-Leopoldsdorf , Österreich , 4004 Einwohner
-Langenbernsdorf , Deutschland , 4013 Einwohner
-Wöllersdorf-Steinabrückl , Österreich , 4022 Einwohner
-Leubsdorf, Sachsen , Deutschland , 4072 Einwohner
-Kirchdorf an der Krems , Österreich , 4114 Einwohner
-Hohndorf bei Stollberg, Erzgeb , Deutschland , 4129 Einwohner
-Füllinsdorf , Schweiz , 4164 Einwohner
-Allendorf (Lumda) , Deutschland , 4167 Einwohner
-Hägendorf , Schweiz , 4178 Einwohner
-Eggendorf , Österreich , 4201 Einwohner
-Saalburg-Ebersdorf , Deutschland , 4206 Einwohner
-Ummendorf (Kreis Biberach an d , Deutschland , 4210 Einwohner
-Jennersdorf , Österreich , 4235 Einwohner
-Felixdorf , Österreich , 4252 Einwohner
-Remptendorf , Deutschland , 4262 Einwohner
-Bubendorf , Schweiz , 4262 Einwohner
-Großhabersdorf , Deutschland , 4296 Einwohner
-Leobersdorf , Österreich , 4357 Einwohner
-Möhrendorf , Deutschland , 4388 Einwohner
-Leutersdorf, Oberlausitz , Deutschland , 4389 Einwohner
-Kraftsdorf , Deutschland , 4441 Einwohner
-Altdorf (Kreis Böblingen) , Deutschland , 4447 Einwohner
-Nürensdorf , Schweiz , 4475 Einwohner
-Rückersdorf, Mittelfranken , Deutschland , 4489 Einwohner
-Denkendorf, Oberbayern , Deutschland , 4508 Einwohner
-Mittelherwigsdorf , Deutschland , 4508 Einwohner
-Leobendorf , Österreich , 4526 Einwohner
-Mammendorf, Oberbayern , Deutschland , 4528 Einwohner
-Markersdorf bei Görlitz , Deutschland , 4533 Einwohner
-Rattelsdorf, Oberfranken , Deutschland , 4550 Einwohner
-Schacht-Audorf , Deutschland , 4569 Einwohner
-Gersdorf bei Hohenstein-Ernstt , Deutschland , 4623 Einwohner
-Altendorf , Schweiz , 4638 Einwohner
-Ober-Grafendorf , Österreich , 4646 Einwohner
-Ohlsdorf , Österreich , 4649 Einwohner
-Hochdorf bei Plochingen , Deutschland , 4712 Einwohner
-Pretzschendorf , Deutschland , 4736 Einwohner
-Windorf , Deutschland , 4739 Einwohner
-Lüdersdorf, Mecklenburg , Deutschland , 4748 Einwohner
-Igensdorf , Deutschland , 4751 Einwohner
-Oberaudorf , Deutschland , 4775 Einwohner
-Walddorfhäslach , Deutschland , 4775 Einwohner
-Henndorf am Wallersee , Österreich , 4796 Einwohner
-Frensdorf, Oberfranken , Deutschland , 4821 Einwohner
-Hartmannsdorf bei Chemnitz , Deutschland , 4841 Einwohner
-Crottendorf, Erzgebirge , Deutschland , 4847 Einwohner
-Wesendorf, Niedersachsen , Deutschland , 4847 Einwohner
-Wilhelmsdorf (Württemberg) , Deutschland , 4860 Einwohner
-Eppendorf, Sachsen , Deutschland , 4863 Einwohner
-Dielsdorf , Schweiz , 4882 Einwohner
-Schattdorf , Schweiz , 4897 Einwohner
-Andorf , Österreich , 4908 Einwohner
-Dürrröhrsdorf-Dittersbach , Deutschland , 4920 Einwohner
-Seifhennersdorf , Deutschland , 4932 Einwohner
-Arnsdorf bei Dresden , Deutschland , 4948 Einwohner
-Wackersdorf , Deutschland , 5008 Einwohner
-Gschwend bei Gaildorf , Deutschland , 5041 Einwohner
-Zapfendorf , Deutschland , 5067 Einwohner
-Seubersdorf in der Oberpfalz , Deutschland , 5068 Einwohner
-Wilhermsdorf , Deutschland , 5075 Einwohner
-Eckersdorf , Deutschland , 5096 Einwohner
-Weitramsdorf , Deutschland , 5158 Einwohner
-Kalsdorf bei Graz , Österreich , 5178 Einwohner
-Ühlingen-Birkendorf , Deutschland , 5216 Einwohner
-Rottendorf, Unterfranken , Deutschland , 5232 Einwohner
-Satteldorf , Deutschland , 5254 Einwohner
-Driedorf , Deutschland , 5270 Einwohner
-Kirchdorf am Inn , Deutschland , 5296 Einwohner
-Judendorf-Straßengel , Österreich , 5297 Einwohner
-Saaldorf-Surheim , Deutschland , 5316 Einwohner
-Erbendorf , Deutschland , 5369 Einwohner
-Gleisdorf , Österreich , 5419 Einwohner
-Lachendorf, Kreis Celle , Deutschland , 5445 Einwohner
-Birmensdorf (ZH) , Schweiz , 5451 Einwohner
-Rohrdorf, Kreis Rosenheim, Obe , Deutschland , 5458 Einwohner
-Vösendorf , Österreich , 5490 Einwohner
-Zistersdorf , Österreich , 5499 Einwohner
-Poysdorf , Österreich , 5514 Einwohner
-Ehrenfriedersdorf , Deutschland , 5524 Einwohner
-Oberndorf bei Salzburg , Österreich , 5560 Einwohner
-Geltendorf , Deutschland , 5581 Einwohner
-Uetendorf , Schweiz , 5702 Einwohner
-Frenkendorf , Schweiz , 5703 Einwohner
-Allendorf (Eder) , Deutschland , 5718 Einwohner
-Bondorf (Kreis Böblingen) , Deutschland , 5783 Einwohner
-Bernsdorf, Oberlausitz , Deutschland , 5799 Einwohner
-Micheldorf in Oberösterreich , Österreich , 5841 Einwohner
-Dierdorf , Deutschland , 5996 Einwohner
-Pottendorf , Österreich , 6014 Einwohner
-Adorf, Vogtland , Deutschland , 6017 Einwohner
-Eberndorf , Österreich , 6095 Einwohner
-Wermsdorf , Deutschland , 6136 Einwohner
-Jahnsdorf / Erzgebirge , Deutschland , 6153 Einwohner
-Litzendorf , Deutschland , 6155 Einwohner
-Weisendorf , Deutschland , 6175 Einwohner
-Olbersdorf , Deutschland , 6250 Einwohner
-Speichersdorf , Deutschland , 6250 Einwohner
-Ebersdorf bei Coburg , Deutschland , 6261 Einwohner
-Wolkersdorf im Weinviertel , Österreich , 6301 Einwohner
-Stadtoldendorf , Deutschland , 6360 Einwohner
-Eugendorf , Österreich , 6429 Einwohner
-Holdorf, Niedersachsen , Deutschland , 6450 Einwohner
-Neugersdorf, Sachsen , Deutschland , 6531 Einwohner
-Mallersdorf-Pfaffenberg , Deutschland , 6622 Einwohner
-Eichendorf, Niederbayern , Deutschland , 6641 Einwohner
-Wallersdorf, Niederbayern , Deutschland , 6758 Einwohner
-Ensdorf, Saar , Deutschland , 6764 Einwohner
-Glandorf , Deutschland , 6792 Einwohner
-Otterndorf, Niederelbe , Deutschland , 6817 Einwohner
-Bonndorf im Schwarzwald , Deutschland , 6876 Einwohner
-Maxdorf , Deutschland , 7010 Einwohner
-Herdorf , Deutschland , 7020 Einwohner
-Schulzendorf bei Eichwalde , Deutschland , 7117 Einwohner
-Baiersdorf , Deutschland , 7147 Einwohner
-Burkhardtsdorf , Deutschland , 7163 Einwohner
-Woltersdorf bei Erkner , Deutschland , 7198 Einwohner
-Alfdorf , Deutschland , 7209 Einwohner
-Adelsdorf, Mittelfranken , Deutschland , 7212 Einwohner
-Vorchdorf , Österreich , 7255 Einwohner
-Niedergörsdorf , Deutschland , 7257 Einwohner
-Aadorf , Schweiz , 7301 Einwohner
-Großröhrsdorf, Oberlausitz , Deutschland , 7491 Einwohner
-Langenzersdorf , Österreich , 7524 Einwohner
-Rangsdorf , Deutschland , 7619 Einwohner
-Meldorf (Holstein) , Deutschland , 7655 Einwohner
-Bad Endorf, Oberbayern , Deutschland , 7667 Einwohner
-Hengersberg bei Deggendorf , Deutschland , 7695 Einwohner
-Hochdorf , Schweiz , 7761 Einwohner
-Engerwitzdorf , Österreich , 7804 Einwohner
-Strullendorf , Deutschland , 7813 Einwohner
-Winterbach bei Schorndorf, Wür , Deutschland , 7847 Einwohner
-Purkersdorf , Österreich , 8038 Einwohner
-Borsdorf an der Parthe , Deutschland , 8045 Einwohner
-Frielendorf , Deutschland , 8152 Einwohner
-Siegsdorf, Oberbayern , Deutschland , 8180 Einwohner
-Heikendorf , Deutschland , 8214 Einwohner
-Fohnsdorf , Österreich , 8316 Einwohner
-Maria Enzersdorf , Österreich , 8464 Einwohner
-Groß-Enzersdorf , Österreich , 8532 Einwohner
-Altdorf (UR) , Schweiz , 8541 Einwohner
-Guntramsdorf , Österreich , 8688 Einwohner
-Berndorf , Österreich , 8698 Einwohner
-Gänserndorf , Österreich , 8764 Einwohner
-Wiener Neudorf , Österreich , 8766 Einwohner
-Reinsdorf bei Zwickau , Deutschland , 8833 Einwohner
-Hermsdorf, Thüringen , Deutschland , 8865 Einwohner
-Bad Sooden-Allendorf , Deutschland , 8916 Einwohner
-Memmelsdorf , Deutschland , 8978 Einwohner
-Ebsdorfergrund , Deutschland , 9001 Einwohner
-Timmendorfer Strand , Deutschland , 9050 Einwohner
-Großhansdorf , Deutschland , 9069 Einwohner
-Gerasdorf bei Wien , Österreich , 9069 Einwohner
-Teisendorf , Deutschland , 9115 Einwohner
-Nittendorf , Deutschland , 9127 Einwohner
-Ebreichsdorf , Österreich , 9194 Einwohner
-Markt Indersdorf , Deutschland , 9197 Einwohner
-Urdorf , Schweiz , 9417 Einwohner
-Heringsdorf , Deutschland , 9477 Einwohner
-Karlsdorf-Neuthard , Deutschland , 9479 Einwohner
-Adendorf, Kreis Lüneburg , Deutschland , 9784 Einwohner
-Sandersdorf, Sachsen-Anhalt , Deutschland , 9905 Einwohner
-Oberstdorf , Deutschland , 9948 Einwohner
-Aulendorf (Württemberg) , Deutschland , 10001 Einwohner
-Bad Nenndorf , Deutschland , 10062 Einwohner
-Diedorf (Schwaben) , Deutschland , 10154 Einwohner
-Augustdorf , Deutschland , 10155 Einwohner
-Bassersdorf , Schweiz , 10230 Einwohner
-Michendorf , Deutschland , 10233 Einwohner
-Männedorf , Schweiz , 10243 Einwohner
-Büdelsdorf , Deutschland , 10245 Einwohner
-Ottendorf-Okrilla , Deutschland , 10273 Einwohner
-Betzdorf , Deutschland , 10300 Einwohner
-Denkendorf (Württemberg) , Deutschland , 10507 Einwohner
-Rüdersdorf bei Berlin , Deutschland , 10551 Einwohner
-Salzhemmendorf , Deutschland , 10755 Einwohner
-Donzdorf , Deutschland , 11070 Einwohner
-Altdorf, Markt , Deutschland , 11312 Einwohner
-Bad Sassendorf , Deutschland , 11392 Einwohner
-Graben-Neudorf , Deutschland , 11654 Einwohner
-Fredersdorf-Vogelsdorf , Deutschland , 11672 Einwohner
-Rosdorf , Deutschland , 11709 Einwohner
-Brand-Erbisdorf , Deutschland , 11761 Einwohner
-Roßdorf bei Darmstadt , Deutschland , 12123 Einwohner
-Petershagen / Eggersdorf , Deutschland , 12197 Einwohner
-Stahnsdorf , Deutschland , 12216 Einwohner
-Gaildorf , Deutschland , 12592 Einwohner
-Markdorf (Baden) , Deutschland , 12661 Einwohner
-Lappersdorf, Oberpfalz , Deutschland , 12871 Einwohner
-Kleinblittersdorf , Deutschland , 12995 Einwohner
-Pfullendorf (Baden) , Deutschland , 13214 Einwohner
-Dorfen, Stadt , Deutschland , 13481 Einwohner
-Preußisch Oldendorf , Deutschland , 13536 Einwohner
-Schiffdorf , Deutschland , 14038 Einwohner
-Perchtoldsdorf , Österreich , 14116 Einwohner
-Bissendorf, Kreis Osnabrück , Deutschland , 14299 Einwohner
-Walldorf (Baden) , Deutschland , 14663 Einwohner
-Oberndorf am Neckar , Deutschland , 14693 Einwohner
-Burgdorf , Schweiz , 14938 Einwohner
-Altdorf bei Nürnberg , Deutschland , 15312 Einwohner
-Regensdorf , Schweiz , 16143 Einwohner
-Stockelsdorf , Deutschland , 16510 Einwohner
-Bendorf , Deutschland , 17400 Einwohner
-Mühldorf am Inn , Deutschland , 17800 Einwohner
-Marktoberdorf , Deutschland , 18487 Einwohner
-Hessisch Oldendorf , Deutschland , 19973 Einwohner
-Wilnsdorf , Deutschland , 21430 Einwohner
-Stadtallendorf , Deutschland , 21523 Einwohner
-Elsdorf, Rheinland , Deutschland , 21633 Einwohner
-Hohen Neuendorf , Deutschland , 21920 Einwohner
-Dübendorf , Schweiz , 23529 Einwohner
-Friedrichsdorf, Taunus , Deutschland , 24525 Einwohner
-Zirndorf, Mittelfranken , Deutschland , 25171 Einwohner
-Hennigsdorf , Deutschland , 26142 Einwohner
-Schwandorf, Bayern , Deutschland , 28150 Einwohner
-Burgdorf, Kreis Hannover , Deutschland , 30304 Einwohner
-Deggendorf , Deutschland , 31294 Einwohner
-Mörfelden-Walldorf , Deutschland , 33348 Einwohner
-Warendorf , Deutschland , 37393 Einwohner
-Schorndorf (Württemberg) , Deutschland , 39323 Einwohner
-Alsdorf, Rheinland , Deutschland , 46462 Einwohner
-Troisdorf , Deutschland , 74965 Einwohner
-Düsseldorf , Deutschland , 604527 Einwohner
-Einwohner gesamt: 3856836
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     </div>
   </div>
