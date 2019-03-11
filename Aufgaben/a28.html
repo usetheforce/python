@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>a26</title><script src="https://unpkg.com/jupyter-js-widgets@2.0.*/dist/embed.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>a28</title><script src="https://unpkg.com/jupyter-js-widgets@2.0.*/dist/embed.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11775,86 +11775,26 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Zweite-Normalform">Zweite Normalform<a class="anchor-link" href="#Zweite-Normalform">&#182;</a></h2><p><u>Eine Datenbank ist in der <b>2. Normalform</b>, wenn jedes Datenfeld eindeutig durch den Primärschlüssel bestimmt ist.</u></p>
-<p>Das trifft auf unsere bisherigen Tabellen schon zu. Allerdings könnte es sein, dass ein Kunde mit dem gleichen Namen wie ein schon vorhandener Kunde dazukommt. Dann ist diese Bedingung nicht mehr erfüllt. 
-Man könnte das Problem lösen, indem man Name und Adresse und vielleicht noch das Geburtsdatum des Kunden zu einem neuen Primärschlüssel zusammenführt. Einfacher ist es aber, Kundennummern zu vergeben:</p>
-<center><b>Auto</b></center><table>
-<thead><tr>
-<th style="text-align:left"><u>Kennzeichen</u></th>
-<th style="text-align:left">Kilometerstand</th>
-<th style="text-align:left">Hersteller</th>
-<th style="text-align:left">Modell</th>
-<th style="text-align:left">Kundennummer</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">LA-CH123</td>
-<td style="text-align:left">120001</td>
-<td style="text-align:left">Opel</td>
-<td style="text-align:left">Kapitän</td>
-<td style="text-align:left">47</td>
-</tr>
-<tr>
-<td style="text-align:left">LA-UT666</td>
-<td style="text-align:left">97779</td>
-<td style="text-align:left">Opel</td>
-<td style="text-align:left">Diplomat</td>
-<td style="text-align:left">111</td>
-</tr>
-<tr>
-<td style="text-align:left">LA-TZ987</td>
-<td style="text-align:left">28271</td>
-<td style="text-align:left">NSU</td>
-<td style="text-align:left">Prinz</td>
-<td style="text-align:left">47</td>
-</tr>
-<tr>
-<td style="text-align:left">LA-MM128</td>
-<td style="text-align:left">147888</td>
-<td style="text-align:left">Saab</td>
-<td style="text-align:left">9000</td>
-<td style="text-align:left">227</td>
-</tr>
-<tr>
-<td style="text-align:left">LA-UF520</td>
-<td style="text-align:left">197812</td>
-<td style="text-align:left">Opel</td>
-<td style="text-align:left">Admiral</td>
-<td style="text-align:left">47</td>
-</tr>
-</tbody>
-</table>
-<center><b>Kunde</b></center><table>
-<thead><tr>
-<th style="text-align:left">Kunde</th>
-<th style="text-align:left">Adresse</th>
-<th style="text-align:left"><u>Kundennummer</u></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">Kurt Kasper</td>
-<td style="text-align:left">An der Affenschaukel 5, Untermaulbach</td>
-<td style="text-align:left">47</td>
-</tr>
-<tr>
-<td style="text-align:left">Tim Turner</td>
-<td style="text-align:left">Unterm Bach 1, Obermaulbach</td>
-<td style="text-align:left">111</td>
-</tr>
-<tr>
-<td style="text-align:left">Tanja Tochter</td>
-<td style="text-align:left">Am Löschteich 28, Teichgraben</td>
-<td style="text-align:left">227</td>
-</tr>
-<tr>
-<td style="text-align:left">Kurt Kasper</td>
-<td style="text-align:left">Heißt-genau-so-wie 47, Machtabernix</td>
-<td style="text-align:left">2001</td>
-</tr>
-</tbody>
-</table>
+<h2 id="Entity-Relationship-Modell">Entity-Relationship-Modell<a class="anchor-link" href="#Entity-Relationship-Modell">&#182;</a></h2><p>Die Tabellen zum Werkstatt-Beispiel sind etwas unübersichtlich geworden. Für komplexere Beispiele entwirft man für Datenbanktabellen deshalb erst ein graphisches Modell. Ein solches Entity-Relationship-Modell besteht aus drei verschiedenen Elementen (siehe auch Buch S. 76 bis 78):</p>
+<ul>
+<li>Entitäten (Entities)</li>
+<li>Beziehungen zwischen den Entitäten (Relationships)</li>
+<li>Attribute der Entitäten</li>
+</ul>
+<h3 id="Entit&#228;ten">Entit&#228;ten<a class="anchor-link" href="#Entit&#228;ten">&#182;</a></h3><p>Sie entsprechen Objekten in der Realität, z. B. Kunde mit Nummer 2001 oder Auto mit Kennzeichen LA-UF520. Der Entitäts<i>typ</i> (Kunde oder Auto) wird im Modell mit einem Rechteck dargestellt.</p>
+<h3 id="Beziehungen-zwischen-den-Entit&#228;ten">Beziehungen zwischen den Entit&#228;ten<a class="anchor-link" href="#Beziehungen-zwischen-den-Entit&#228;ten">&#182;</a></h3><p>Sie geben an, in welchem Zusammenhang Entitäten eines Typs mit anderen Entitätstypen stehen. Z. B. besitzt ein Kunde ein Auto oder ein Auto wird von einem Hersteller hergestellt. Beziehungen werden durch Rauten dargestellt.</p>
+<h3 id="Attribute">Attribute<a class="anchor-link" href="#Attribute">&#182;</a></h3><p>Das sind die Eigenschaften, die eine Entität haben kann. Die Attributtypen für ein Auto sind z. B. Kilometerstand oder Kennzeichen. Sie werden durch Ovale dargestellt.</p>
+<p><img src="../Grafiken/entitaetBeziehungAttribut.svg"></p>
+<h3 id="Verbindungen">Verbindungen<a class="anchor-link" href="#Verbindungen">&#182;</a></h3><p>Sie geben den Zusammenhang an.</p>
+<ul>
+<li>Attribute hängen immer von genau einer Entität ab. </li>
+<li>Zwei Entitäten sind durch eine Beziehung (Relationship) verbunden.</li>
+</ul>
+<p>Das ER-Modell des Werkstattbeispiels sieht dann so aus:</p>
+<p><p>
+<img src="../Grafiken/werkstattMitPrimaerschluesselPfeilen.svg"></p>
+<p>&lt;p&gt;</p>
+<h4 id="Man-sieht:">Man sieht:<a class="anchor-link" href="#Man-sieht:">&#182;</a></h4><p>Durch das Aufzeichnen nach den o. a. Regeln wird schnell klar, wie die Tabellenstruktur später aussehen soll. Es wird auch klar, dass es Sinn das Attribut "Kunde" in der Tabelle "Kunde" in "Name" zu ändern. Manchmal (aber meistens <u>nicht</u>) zeichnet man noch zusätzliche Pfeile von Fremd- zu den zugehörigen Primärschlüsseln ein, um darzustellen, wie die Beziehungen später in der Datenbank umgesetzt werden.</p>
 
 </div>
 </div>
@@ -11863,127 +11803,13 @@ Man könnte das Problem lösen, indem man Name und Adresse und vielleicht noch d
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Aufgabe-26:">Aufgabe 26:<a class="anchor-link" href="#Aufgabe-26:">&#182;</a></h3><p>Löse die folgenden Aufgaben in Python und speichere das Ergebnis unter <em>VornameNachname</em>-aufgabe26.ipynb auf Laufwerk H:.</p>
-<ul>
-<li>Nenne einen weiteren Grund (außer, dass zwei Kunden mit gleichem Namen möglich sind) dafür, warum es keine gute Idee ist, das Auto über den Namen des Besitzers zuzuordnen.</li>
+<h3 id="Aufgabe-28:">Aufgabe 28:<a class="anchor-link" href="#Aufgabe-28:">&#182;</a></h3><ul>
+<li>Lade die Datei <em>werkstattMitPrimaerschluesselPfeilen.svg</em> im Aufgaben-Ordner in das Tool <a href="https://www.draw.io/">https://www.draw.io/</a> und entferne die dicken Pfeile von den Fremd- zu den Primärschlüsseln. Lösche das Attribut "Adresse" und füge zwei neue Attribute "Strasse" und "Wohnort" ein. Speichere das Ergebnis unter <em>VornameNachname</em>-aufgabe28-werkstatt.<b>svg</b> auf Laufwerk H:.</li>
+<li>Erstelle mit draw.io ER-Modelle für Aufgabe 1a) und 2a) auf Seite 80 im Buch und speichere die Diagramme unter Ergebnis unter <em>VornameNachname</em>-aufgabe28-1.<b>svg</b> <em>VornameNachname</em>-aufgabe28-2.<b>svg</b> auf Laufwerk H:.</li>
 </ul>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>...</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Welches Problem könnte es mit dem Autokennzeichen als Primärschlüssel für die Fahrzeuge geben?</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>...</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Passe per Python und SQL die Tabellen in deiner Datenbank so an, dass sie der Variante mit den Kundennummern entsprechen. (Empfehlung: Tabellen löschen und neu anlegen.)</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[(&#39;LA-CH123&#39;, 120001, &#39;Opel Kapitän&#39;, &#39;BRD&#39;, 47), (&#39;LA-UT666&#39;, 97779, &#39;Opel Diplomat&#39;, &#39;BRD&#39;, 111), (&#39;LA-TZ987&#39;, 28271, &#39;NSU Prinz&#39;, &#39;BRD&#39;, 47), (&#39;LA-MM128&#39;, 147888, &#39;Saab 9000&#39;, &#39;Schweden&#39;, 227), (&#39;LA-UF520&#39;, 197812, &#39;Trabant Sport&#39;, &#39;DDR&#39;, 47)]
-[(&#39;Kurt Kasper&#39;, &#39;An der Affenschaukel 5, Untermaulbach&#39;, &#39;47&#39;), (&#39;Tanja Tochter&#39;, &#39;Am Löschteich 28, Teichgraben&#39;, &#39;111&#39;), (&#39;Tim Turner&#39;, &#39;Unterm Bach 1, Obermaulbach&#39;, &#39;227&#39;), (&#39;Kurt Kasper&#39;, &#39;Heißt-genau-so-wie 47, Machtabernix&#39;, &#39;2001&#39;)]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Verändere deinen Code aus der letzten Aufgabe so, dass in der neuen Variante wieder Tanja Tochters Adresse und der Kilometerstand ihres Autos per INNER JOIN-Statement ausgegeben werden.</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[(&#39;Am Löschteich 28, Teichgraben&#39;, 97779)]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     </div>
   </div>

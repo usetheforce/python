@@ -11776,7 +11776,7 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Normalisierung">Normalisierung<a class="anchor-link" href="#Normalisierung">&#182;</a></h2><p>Die Lösung mit den zwei Tabellen ist noch nicht perfekt. Um zu redundanzfreien und weitgehend anomalieresistenten Tabellen zu kommen, gibt es ein drei-schrittiges Verfahren: die "Normalisierung".</p>
-<h3 id="Erste-Normalform">Erste Normalform<a class="anchor-link" href="#Erste-Normalform">&#182;</a></h3><p><u>Eine Datenbank ist in der <b>1. Normalform</b>, wenn pro Datenfeld nur maximal ein Wert vorhanden ist.</u></p>
+<h3 id="Erste-Normalform">Erste Normalform<a class="anchor-link" href="#Erste-Normalform">&#182;</a></h3><p><u>Eine Datenbank ist in der <b>1. Normalform</b>, wenn pro Spalte nur maximal ein Wert vorhanden ist.</u></p>
 <p>Im Beispiel waren unter "besitzt" bei Kurt Kasper 3 Fahrzeuge gespeichert. Das darf nicht sein. Um das zu verhindern, können die Tabellen z. B. so aufgeteilt werden:</p>
 <center><b>Auto</b></center><table>
 <thead><tr>
@@ -11842,7 +11842,8 @@ div#notebook {
 </table>
 <h3 id="Hinweis:">Hinweis:<a class="anchor-link" href="#Hinweis:">&#182;</a></h3><ul>
 <li>Die Primärschlüssel in der Tabellenüberschrift wurden wegen besserer Lesbarkeit unterstrichen.</li>
-<li>Manche sehen auch Vorname und Name, sowie Strasse und Ort als verschiedene Werte an, die nicht in einer gemeinsamen Spalte stehen sollten. Ob man hier eine Trennung durchführt oder nicht, hängt davon ab, ob die Werte auch getrennt voneinander verwendet werden oder nur immer zusammen. Im Beispiel soll angenommen werden, dass das Fabrikat nach Hersteller und Modell unterschieden werden soll.</li>
+<li>Manche sehen auch Vorname und Name, sowie Strasse und Ort als verschiedene Werte an, die nicht in einer gemeinsamen Spalte stehen sollten. Ob man hier eine Trennung durchführt oder nicht, hängt davon ab, ob die Werte auch getrennt voneinander verwendet werden oder nur immer zusammen. 
+<br>Im Beispiel soll angenommen werden, dass das Fabrikat nach Hersteller und Modell unterschieden werden soll, um z. B. eine Statistik über das Vorkommen verschiedener Hersteller zu führen. Dann wäre die Datenbank erst mit folgenden Tabellen in der 2. Normalform:</li>
 </ul>
 <center><b>Auto</b></center><table>
 <thead><tr>
@@ -11971,7 +11972,7 @@ div#notebook {
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[(&#39;LA-CH123&#39;, 120001, &#39;Opel&#39;, &#39;Kapitän&#39;, &#39;Kurt Kasper&#39;), (&#39;LA-UT666&#39;, 97779, &#39;Opel&#39;, &#39;Diplomat&#39;, &#39;Tim Turner&#39;), (&#39;LA-TZ987&#39;, 28271, &#39;NSU&#39;, &#39;Prinz&#39;, &#39;Kurt Kasper&#39;), (&#39;LA-MM128&#39;, 147888, &#39;Saab&#39;, &#39;9000&#39;, &#39;Tanja Tochter&#39;), (&#39;LA-UF520&#39;, 197812, &#39;Opel&#39;, &#39;Admiral&#39;, &#39;Kurt Kasper&#39;)]
-[(&#39;Kurt Kasper&#39;, &#39;An der Affenschaukel 5, Untermaulbach&#39;, None), (&#39;Tanja Tochter&#39;, &#39;Am Löschteich 28, Teichgraben&#39;, None), (&#39;Tim Turner&#39;, &#39;Unterm Bach 1, Obermaulbach&#39;, None)]
+[(&#39;Kurt Kasper&#39;, &#39;An der Affenschaukel 5, Untermaulbach&#39;), (&#39;Tanja Tochter&#39;, &#39;Am Löschteich 28, Teichgraben&#39;), (&#39;Tim Turner&#39;, &#39;Unterm Bach 1, Obermaulbach&#39;)]
 </pre>
 </div>
 </div>

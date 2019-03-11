@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>a26</title><script src="https://unpkg.com/jupyter-js-widgets@2.0.*/dist/embed.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>a25-loesung</title><script src="https://unpkg.com/jupyter-js-widgets@2.0.*/dist/embed.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11775,97 +11775,8 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Zweite-Normalform">Zweite Normalform<a class="anchor-link" href="#Zweite-Normalform">&#182;</a></h2><p><u>Eine Datenbank ist in der <b>2. Normalform</b>, wenn jedes Datenfeld eindeutig durch den Primärschlüssel bestimmt ist.</u></p>
-<p>Das trifft auf unsere bisherigen Tabellen schon zu. Allerdings könnte es sein, dass ein Kunde mit dem gleichen Namen wie ein schon vorhandener Kunde dazukommt. Dann ist diese Bedingung nicht mehr erfüllt. 
-Man könnte das Problem lösen, indem man Name und Adresse und vielleicht noch das Geburtsdatum des Kunden zu einem neuen Primärschlüssel zusammenführt. Einfacher ist es aber, Kundennummern zu vergeben:</p>
-<center><b>Auto</b></center><table>
-<thead><tr>
-<th style="text-align:left"><u>Kennzeichen</u></th>
-<th style="text-align:left">Kilometerstand</th>
-<th style="text-align:left">Hersteller</th>
-<th style="text-align:left">Modell</th>
-<th style="text-align:left">Kundennummer</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">LA-CH123</td>
-<td style="text-align:left">120001</td>
-<td style="text-align:left">Opel</td>
-<td style="text-align:left">Kapitän</td>
-<td style="text-align:left">47</td>
-</tr>
-<tr>
-<td style="text-align:left">LA-UT666</td>
-<td style="text-align:left">97779</td>
-<td style="text-align:left">Opel</td>
-<td style="text-align:left">Diplomat</td>
-<td style="text-align:left">111</td>
-</tr>
-<tr>
-<td style="text-align:left">LA-TZ987</td>
-<td style="text-align:left">28271</td>
-<td style="text-align:left">NSU</td>
-<td style="text-align:left">Prinz</td>
-<td style="text-align:left">47</td>
-</tr>
-<tr>
-<td style="text-align:left">LA-MM128</td>
-<td style="text-align:left">147888</td>
-<td style="text-align:left">Saab</td>
-<td style="text-align:left">9000</td>
-<td style="text-align:left">227</td>
-</tr>
-<tr>
-<td style="text-align:left">LA-UF520</td>
-<td style="text-align:left">197812</td>
-<td style="text-align:left">Opel</td>
-<td style="text-align:left">Admiral</td>
-<td style="text-align:left">47</td>
-</tr>
-</tbody>
-</table>
-<center><b>Kunde</b></center><table>
-<thead><tr>
-<th style="text-align:left">Kunde</th>
-<th style="text-align:left">Adresse</th>
-<th style="text-align:left"><u>Kundennummer</u></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">Kurt Kasper</td>
-<td style="text-align:left">An der Affenschaukel 5, Untermaulbach</td>
-<td style="text-align:left">47</td>
-</tr>
-<tr>
-<td style="text-align:left">Tim Turner</td>
-<td style="text-align:left">Unterm Bach 1, Obermaulbach</td>
-<td style="text-align:left">111</td>
-</tr>
-<tr>
-<td style="text-align:left">Tanja Tochter</td>
-<td style="text-align:left">Am Löschteich 28, Teichgraben</td>
-<td style="text-align:left">227</td>
-</tr>
-<tr>
-<td style="text-align:left">Kurt Kasper</td>
-<td style="text-align:left">Heißt-genau-so-wie 47, Machtabernix</td>
-<td style="text-align:left">2001</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Aufgabe-26:">Aufgabe 26:<a class="anchor-link" href="#Aufgabe-26:">&#182;</a></h3><p>Löse die folgenden Aufgaben in Python und speichere das Ergebnis unter <em>VornameNachname</em>-aufgabe26.ipynb auf Laufwerk H:.</p>
-<ul>
-<li>Nenne einen weiteren Grund (außer, dass zwei Kunden mit gleichem Namen möglich sind) dafür, warum es keine gute Idee ist, das Auto über den Namen des Besitzers zuzuordnen.</li>
+<h3 id="L&#246;sung-Aufgabe-25:">L&#246;sung Aufgabe 25:<a class="anchor-link" href="#L&#246;sung-Aufgabe-25:">&#182;</a></h3><ul>
+<li>Welche Vorteile könnte es bringen, z. B. den Wohnort der Kunden in einer eigenen Spalte zu speichern?</li>
 </ul>
 
 </div>
@@ -11875,7 +11786,7 @@ Man könnte das Problem lösen, indem man Name und Adresse und vielleicht noch d
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>...</p>
+<p>Man kann einfach(er) herausfinden, wo die meisten Kunden wohnen, um z. B. gezielte Werbeaktionen für Kunden in einem Gebiet durchzuführen.</p>
 
 </div>
 </div>
@@ -11885,27 +11796,7 @@ Man könnte das Problem lösen, indem man Name und Adresse und vielleicht noch d
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Welches Problem könnte es mit dem Autokennzeichen als Primärschlüssel für die Fahrzeuge geben?</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>...</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Passe per Python und SQL die Tabellen in deiner Datenbank so an, dass sie der Variante mit den Kundennummern entsprechen. (Empfehlung: Tabellen löschen und neu anlegen.)</li>
+<li>Passe per Python und SQL die Tabellen in deiner Datenbank so an, dass sie der oben gezeigten Variante mit der Spalte "gehört" entsprechen. (Empfehlung: Tabellen löschen und neu anlegen.)</li>
 </ul>
 
 </div>
@@ -11913,10 +11804,52 @@ Man könnte das Problem lösen, indem man Name und Adresse und vielleicht noch d
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span> 
+
+<span class="n">datenbankverbindung</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span> <span class="s2">&quot;autowerkstatt.db&quot;</span><span class="p">)</span> 
+
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">datenbankverbindung</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span> 
+
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;DROP TABLE IF EXISTS Auto;&quot;</span><span class="p">)</span> <span class="c1"># Tabelle löschen, wenn es sie schon gibt</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;DROP TABLE IF EXISTS Kunde;&quot;</span><span class="p">)</span> <span class="c1"># Tabelle löschen, wenn es sie schon gibt</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE IF NOT EXISTS Auto ( Kennzeichen TEXT PRIMARY KEY, </span><span class="se">\</span>
+<span class="s2">    Kilometerstand INTEGER, Hersteller TEXT, Modell TEXT, gehört TEXT );&quot;</span><span class="p">)</span> 
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE IF NOT EXISTS Kunde ( Name TEXT PRIMARY KEY, </span><span class="se">\</span>
+<span class="s2">    Adresse TEXT );&quot;</span><span class="p">)</span>
+
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO Auto (Kennzeichen, Kilometerstand, Hersteller, Modell, gehört) </span><span class="se">\</span>
+<span class="s2">    VALUES (&#39;LA-CH123&#39;,120001,&#39;Opel&#39;,&#39;Kapitän&#39;,&#39;Kurt Kasper&#39; );&quot;</span><span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO Auto (Kennzeichen, Kilometerstand, Hersteller, Modell, gehört) </span><span class="se">\</span>
+<span class="s2">    VALUES (&#39;LA-UT666&#39;,97779,&#39;Opel&#39;,&#39;Diplomat&#39;,&#39;Tim Turner&#39; );&quot;</span><span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO Auto (Kennzeichen, Kilometerstand, Hersteller, Modell, gehört) </span><span class="se">\</span>
+<span class="s2">    VALUES (&#39;LA-TZ987&#39;,28271,&#39;NSU&#39;,&#39;Prinz&#39;,&#39;Kurt Kasper&#39; );&quot;</span><span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO Auto (Kennzeichen, Kilometerstand, Hersteller, Modell, gehört) </span><span class="se">\</span>
+<span class="s2">    VALUES (&#39;LA-MM128&#39;,147888,&#39;Saab&#39;,&#39;9000&#39;,&#39;Tanja Tochter&#39; );&quot;</span><span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO Auto (Kennzeichen, Kilometerstand, Hersteller, Modell, gehört) </span><span class="se">\</span>
+<span class="s2">    VALUES (&#39;LA-UF520&#39;,197812,&#39;Opel&#39;,&#39;Admiral&#39;,&#39;Kurt Kasper&#39; );&quot;</span><span class="p">)</span>
+
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO Kunde (Name, Adresse) </span><span class="se">\</span>
+<span class="s2">    VALUES ( &#39;Kurt Kasper&#39;, &#39;An der Affenschaukel 5, Untermaulbach&#39; );&quot;</span><span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO Kunde (Name, Adresse) </span><span class="se">\</span>
+<span class="s2">    VALUES ( &#39;Tanja Tochter&#39;, &#39;Am Löschteich 28, Teichgraben&#39; );&quot;</span><span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO Kunde (Name, Adresse) </span><span class="se">\</span>
+<span class="s2">    VALUES ( &#39;Tim Turner&#39;, &#39;Unterm Bach 1, Obermaulbach&#39; );&quot;</span><span class="p">)</span>
+
+<span class="n">datenbankverbindung</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM sqlite_master;&quot;</span><span class="p">)</span>
+<span class="n">ergebnis</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span> 
+<span class="c1">#print ( ergebnis )</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM Auto;&quot;</span><span class="p">)</span>
+<span class="n">ergebnis</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span> 
+<span class="nb">print</span> <span class="p">(</span> <span class="n">ergebnis</span> <span class="p">)</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM Kunde;&quot;</span><span class="p">)</span>
+<span class="n">ergebnis</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span> 
+<span class="nb">print</span> <span class="p">(</span> <span class="n">ergebnis</span> <span class="p">)</span>
+
+<span class="n">datenbankverbindung</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -11933,8 +11866,8 @@ Man könnte das Problem lösen, indem man Name und Adresse und vielleicht noch d
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[(&#39;LA-CH123&#39;, 120001, &#39;Opel Kapitän&#39;, &#39;BRD&#39;, 47), (&#39;LA-UT666&#39;, 97779, &#39;Opel Diplomat&#39;, &#39;BRD&#39;, 111), (&#39;LA-TZ987&#39;, 28271, &#39;NSU Prinz&#39;, &#39;BRD&#39;, 47), (&#39;LA-MM128&#39;, 147888, &#39;Saab 9000&#39;, &#39;Schweden&#39;, 227), (&#39;LA-UF520&#39;, 197812, &#39;Trabant Sport&#39;, &#39;DDR&#39;, 47)]
-[(&#39;Kurt Kasper&#39;, &#39;An der Affenschaukel 5, Untermaulbach&#39;, &#39;47&#39;), (&#39;Tanja Tochter&#39;, &#39;Am Löschteich 28, Teichgraben&#39;, &#39;111&#39;), (&#39;Tim Turner&#39;, &#39;Unterm Bach 1, Obermaulbach&#39;, &#39;227&#39;), (&#39;Kurt Kasper&#39;, &#39;Heißt-genau-so-wie 47, Machtabernix&#39;, &#39;2001&#39;)]
+<pre>[(&#39;LA-CH123&#39;, 120001, &#39;Opel&#39;, &#39;Kapitän&#39;, &#39;Kurt Kasper&#39;), (&#39;LA-UT666&#39;, 97779, &#39;Opel&#39;, &#39;Diplomat&#39;, &#39;Tim Turner&#39;), (&#39;LA-TZ987&#39;, 28271, &#39;NSU&#39;, &#39;Prinz&#39;, &#39;Kurt Kasper&#39;), (&#39;LA-MM128&#39;, 147888, &#39;Saab&#39;, &#39;9000&#39;, &#39;Tanja Tochter&#39;), (&#39;LA-UF520&#39;, 197812, &#39;Opel&#39;, &#39;Admiral&#39;, &#39;Kurt Kasper&#39;)]
+[(&#39;Kurt Kasper&#39;, &#39;An der Affenschaukel 5, Untermaulbach&#39;), (&#39;Tanja Tochter&#39;, &#39;Am Löschteich 28, Teichgraben&#39;), (&#39;Tim Turner&#39;, &#39;Unterm Bach 1, Obermaulbach&#39;)]
 </pre>
 </div>
 </div>
@@ -11959,7 +11892,18 @@ Man könnte das Problem lösen, indem man Name und Adresse und vielleicht noch d
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span> 
+
+<span class="n">datenbankverbindung</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span> <span class="s2">&quot;autowerkstatt.db&quot;</span><span class="p">)</span> 
+
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">datenbankverbindung</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span> 
+
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT Kunde.Adresse, Auto.Kilometerstand </span><span class="se">\</span>
+<span class="s2">    FROM Kunde, Auto WHERE Kunde.Name = Auto.gehört AND Kunde.Name = &#39;Tanja Tochter&#39;;&quot;</span><span class="p">)</span>
+<span class="n">ergebnis</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span> 
+<span class="nb">print</span> <span class="p">(</span> <span class="n">ergebnis</span> <span class="p">)</span>
+
+<span class="n">datenbankverbindung</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -11976,7 +11920,7 @@ Man könnte das Problem lösen, indem man Name und Adresse und vielleicht noch d
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[(&#39;Am Löschteich 28, Teichgraben&#39;, 97779)]
+<pre>[(&#39;Am Löschteich 28, Teichgraben&#39;, 147888)]
 </pre>
 </div>
 </div>

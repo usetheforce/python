@@ -1,5 +1,7 @@
 ## Inhaltsverzeichnis:
 
+[ipynb](https://raw.githubusercontent.com/usetheforce/test/master/SQL-Befehlsreferenz.pdf)
+
 a00 [html](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a00.html)&nbsp;[ipynb](https://raw.githubusercontent.com/usetheforce/test/master/Aufgaben/a00.ipynb)&nbsp;Das ist eine Überschrift.
 
 a01 [html](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a01.html)&nbsp;[ipynb](https://raw.githubusercontent.com/usetheforce/test/master/Aufgaben/a01.ipynb)&nbsp;Aufgabe 2:
@@ -60,13 +62,25 @@ a22-loesung [html](https://htmlpreview.github.io/?https://github.com/usetheforce
 
 a22 [html](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a22.html)&nbsp;[ipynb](https://raw.githubusercontent.com/usetheforce/test/master/Aufgaben/a22.ipynb)&nbsp;Aktionsabfragen
 
+a23-loesung [html](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a23-loesung.html)&nbsp;[ipynb](https://raw.githubusercontent.com/usetheforce/test/master/Aufgaben/a23-loesung.ipynb)&nbsp;
+
 a23 [html](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a23.html)&nbsp;[ipynb](https://raw.githubusercontent.com/usetheforce/test/master/Aufgaben/a23.ipynb)&nbsp;# Datenintegrität und Datenkonsistenz
+
+a24-loesung [html](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a24-loesung.html)&nbsp;[ipynb](https://raw.githubusercontent.com/usetheforce/test/master/Aufgaben/a24-loesung.ipynb)&nbsp;
 
 a24 [html](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a24.html)&nbsp;[ipynb](https://raw.githubusercontent.com/usetheforce/test/master/Aufgaben/a24.ipynb)&nbsp;Lösung der Redundanz- und Konsistenz-Problematik: Mehrere Tabellen
 
+a25-loesung [html](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a25-loesung.html)&nbsp;[ipynb](https://raw.githubusercontent.com/usetheforce/test/master/Aufgaben/a25-loesung.ipynb)&nbsp;
+
 a25 [html](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a25.html)&nbsp;[ipynb](https://raw.githubusercontent.com/usetheforce/test/master/Aufgaben/a25.ipynb)&nbsp;Normalisierung
+
+a26-loesung [html](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a26-loesung.html)&nbsp;[ipynb](https://raw.githubusercontent.com/usetheforce/test/master/Aufgaben/a26-loesung.ipynb)&nbsp;
 
 a26 [html](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a26.html)&nbsp;[ipynb](https://raw.githubusercontent.com/usetheforce/test/master/Aufgaben/a26.ipynb)&nbsp;Zweite Normalform
 
+a27-loesung [html](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a27-loesung.html)&nbsp;[ipynb](https://raw.githubusercontent.com/usetheforce/test/master/Aufgaben/a27-loesung.ipynb)&nbsp;
+
 a27 [html](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a27.html)&nbsp;[ipynb](https://raw.githubusercontent.com/usetheforce/test/master/Aufgaben/a27.ipynb)&nbsp;Dritte Normalform
+
+a28 [html](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a28.html)&nbsp;[ipynb](https://raw.githubusercontent.com/usetheforce/test/master/Aufgaben/a28.ipynb)&nbsp;Entity-Relationship-Modell
 
