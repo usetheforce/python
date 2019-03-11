@@ -1,6 +1,6 @@
 ## Inhaltsverzeichnis:
 
-[ipynb](https://raw.githubusercontent.com/usetheforce/test/master/SQL-Befehlsreferenz.pdf)
+[SQL-Befehlsreferenz.pdf](https://raw.githubusercontent.com/usetheforce/test/master/SQL-Befehlsreferenz.pdf)
 
 a00 [html](https://htmlpreview.github.io/?https://github.com/usetheforce/test/blob/master/Aufgaben/a00.html)&nbsp;[ipynb](https://raw.githubusercontent.com/usetheforce/test/master/Aufgaben/a00.ipynb)&nbsp;Das ist eine Überschrift.
 
